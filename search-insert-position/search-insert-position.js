@@ -30,9 +30,16 @@
 //     return nums.length;
 // }
 
-const searchInsert = (nums, target) => {
+// const searchInsert = (nums, target) => {
+//     for (let i=0; i<nums.length; i++) {
+//         if (target === nums[i] || target < nums[i]) return i;
+//         else if (target > nums[nums.length-1]) return nums.length;
+//     }
+// }
+
+var searchInsert = function(nums, target) {
     for (let i=0; i<nums.length; i++) {
         if (target === nums[i] || target < nums[i]) return i;
+        else if (target > nums[nums.length-1]) return nums.length;
     }
-    return nums.length;
 }
