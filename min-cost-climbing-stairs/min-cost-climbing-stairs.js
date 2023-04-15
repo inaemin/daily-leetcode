@@ -8,5 +8,5 @@ var minCostClimbingStairs = function(cost) {
         res[i] = Math.min(res[i-2]+cost[i], res[i-1]+cost[i]);
     }
 
-    return Math.min(res.at(-1), res.at(-2));
+    return Math.min(res[res.length-2], res[res.length-1]);
 };
