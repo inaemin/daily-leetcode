@@ -13,7 +13,7 @@ var coinChange = function(coins, amount) {
                 dp[i] = 1;
                 break;
             }
-            else if (dp[i-coin] < amount+1) {
+            else if (dp[i-coin] && dp[i-coin] < amount+1) {
                 dp[i] = Math.min(dp[i], dp[i-coin] + 1);
             }
         }
