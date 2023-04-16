@@ -35,6 +35,5 @@ var numWays = function(words, target) {
             }
         }
     }
-    console.log(dp)
-    return dp[m-1][n-1] % mod;
+    return dp[m-1][n-1];
 };
