@@ -5,5 +5,9 @@
  */
 var kidsWithCandies = function(candies, extraCandies) {
     const limit = Math.max(...candies);
-    return candies.map(el => el+extraCandies >= limit ? true : false);
+    candies.forEach((el, idx, org) => {
+        if (el + extraCandies >= limit) org[idx] = true;
+        else org[idx] = false;
+    })
+    return candies;
 };
