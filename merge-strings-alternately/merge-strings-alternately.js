@@ -5,11 +5,11 @@
  */
 var mergeAlternately = function(word1, word2) {
     let i=0;
-    const result = []
+    let answer = ""
     while (word1[i] || word2[i]) {
-        if (word1[i]) result.push(word1[i])
-        if (word2[i]) result.push(word2[i])
+        if (word1[i]) answer += word1[i]
+        if (word2[i]) answer += word2[i]
         i += 1;
     }
-    return result.join("")
+    return answer;
 };
