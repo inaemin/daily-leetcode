@@ -4,7 +4,7 @@
  */
 var canVisitAllRooms = function(rooms) {
     const visited = new Set([0])
-    const queue = [...rooms[0]];
+    const queue = rooms[0];
     while (queue.length) {
         visited.add(queue[0])
         rooms[queue[0]].forEach((el) => {
