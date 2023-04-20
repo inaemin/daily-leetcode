@@ -17,11 +17,11 @@ var letterCombinations = function(digits) {
     }
 
     const bt = (letter, idx) => {
-        let chars = dial[digits[idx]];
-        if (chars === undefined) {
+        if (idx === digits.length) {
             answer.push(letter);
             return;
         }
+        let chars = dial[digits[idx]];
         chars.forEach((el) => {
             bt(letter + el, idx+1)
         })
