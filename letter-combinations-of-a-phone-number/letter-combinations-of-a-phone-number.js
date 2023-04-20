@@ -28,7 +28,7 @@ var letterCombinations = function(digits) {
     }
 
     if (digits.length < 1) return answer;
-    bt("", 0)
+    bt("", 0) // bt(currentLetter, nextIdx)
           
     return answer;
 };
