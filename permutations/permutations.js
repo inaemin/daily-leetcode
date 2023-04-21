@@ -4,28 +4,35 @@
  */
 var permute = function(nums) {
     // recursion1
-    const result = [];
+    // const result = [];
+    // const bt = (subset, idx, rest) => {
+    //     if (!rest.length) {
+    //         result.push([...subset])
+    //         return;
+    //     }
 
-    const backtrack = (current, rest) => {
-        if (!rest.length) {
-            result.push([...current]);
-            return;
-        }
+    //     rest.forEach((fixed, i, o) => {
+    //         subset.push(fixed);
+    //         bt(subset, idx+1, o.filter(el => el !== fixed));
+    //         subset.pop();
+    //     })
+    // }
 
-        for (let i = 0; i < rest.length; i++) {
-            [rest[i], rest[0]] = [rest[0], rest[i]];
-            current.push(rest[0]);
-            backtrack(current, rest.slice(1));
-            current.pop();
-            [rest[i], rest[0]] = [rest[0], rest[i]];
-        }
-    };
-
-    backtrack([], nums);
-    return result;
+    // bt([], 0, nums) //current, nextIdx
+    // return result;
 
     // recursion2
+    const result = [];
+    if (nums.length === 1) return nums.map(el => [el]);
 
+    nums.forEach((fixed, idx, org) => {
+        const rest = org.filter(el => el !== fixed);
+        const permutations = permute(rest);
+        const attach = permutations.map(el => [fixed, ...el]);
+        result.push(...attach);
+    })
+
+    return result;
 
     // iteration
 };
