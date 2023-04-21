@@ -3,23 +3,29 @@
  * @return {number[][]}
  */
 var permute = function(nums) {
-    // recursion
+    // recursion1
     const result = [];
-    const bt = (subset, idx, rest) => {
+
+    const backtrack = (current, rest) => {
         if (!rest.length) {
-            result.push([...subset])
+            result.push([...current]);
             return;
         }
 
-        rest.forEach((fixed, i, o) => {
-            subset.push(fixed);
-            bt(subset, idx+1, o.filter(el => el !== fixed));
-            subset.pop();
-        })
-    }
+        for (let i = 0; i < rest.length; i++) {
+            [rest[i], rest[0]] = [rest[0], rest[i]];
+            current.push(rest[0]);
+            backtrack(current, rest.slice(1));
+            current.pop();
+            [rest[i], rest[0]] = [rest[0], rest[i]];
+        }
+    };
 
-    bt([], 0, nums) //current, nextIdx
+    backtrack([], nums);
     return result;
+
+    // recursion2
+
 
     // iteration
 };
