@@ -6,7 +6,7 @@ var permute = function(nums) {
     // recursion
     const result = [];
     const bt = (subset, idx, rest) => {
-        if (subset.length === nums.length) {
+        if (!rest.length) {
             result.push([...subset])
             return;
         }
