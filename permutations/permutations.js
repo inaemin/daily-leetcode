@@ -5,7 +5,7 @@
 var permute = function(nums) {
     // recursion1
     const result = [];
-    const bt = (subset, idx, rest) => {
+    const bt = (subset, rest) => {
         if (rest.length === 1) {
             result.push([...subset, rest[0]])
             return;
@@ -13,12 +13,12 @@ var permute = function(nums) {
 
         rest.forEach((fixed, i, o) => {
             subset.push(fixed);
-            bt(subset, idx+1, o.filter(el => el !== fixed));
+            bt(subset, o.filter(el => el !== fixed));
             subset.pop();
         })
     }
 
-    bt([], 0, nums) //current, nextIdx
+    bt([], nums) //current, nextIdx
     return result;
 
 
