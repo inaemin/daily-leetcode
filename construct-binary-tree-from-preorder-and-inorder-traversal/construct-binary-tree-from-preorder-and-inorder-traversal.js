@@ -21,20 +21,21 @@
  }
 
 var buildTree = function(preorder, inorder) {
-    // const hashmap = new Map(); // inorder index를 빨리 찾기 위한 map.
-    // inorder.forEach((el, idx) => {
-    //     hashmap.set(el, idx);
-    // })
+    const hashmap = new Map(); // inorder index를 빨리 찾기 위한 map.
+    inorder.forEach((el, idx) => {
+        hashmap.set(el, idx);
+    })
 
-    const maketree = (preo, ino, root) => {
-        if (!preo.length || !ino.length) return null;
+    const maketree = (pre_start, pre_end, in_start, in_end, root) => {
+        if (pre_start > pre_end || in_start > in_end) return null;
 
-        root = new TreeNode(preo[0]);
-        let inoIdx = ino.indexOf(preo[0]);
-        root.left = maketree(preo.slice(1, inoIdx+1), ino.slice(0, inoIdx), root) // leftnode
-        root.right = maketree(preo.slice(inoIdx+1), ino.slice(inoIdx + 1), root) // rightnode
+        root = new TreeNode(preorder[pre_start]);
+        let idx = hashmap.get(preorder[pre_start]);
+        let leftSize = idx - in_start
+        root.left = maketree(pre_start+1, pre_start+leftSize, in_start, idx-1, root) // leftnode
+        root.right = maketree(pre_start+leftSize+1, pre_end, idx+1, in_end, root) // rightnode
         return root;
     }
 
-    return maketree(preorder, inorder);
+    return maketree(0, preorder.length-1, 0, inorder.length-1);
 };
