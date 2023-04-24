@@ -26,14 +26,14 @@ var buildTree = function(preorder, inorder) {
         hashmap.set(el, idx);
     })
 
-    const maketree = (pre_start, pre_end, in_start, in_end, root) => {
+    const maketree = (pre_start, pre_end, in_start, in_end) => {
         if (pre_start > pre_end || in_start > in_end) return null;
 
-        root = new TreeNode(preorder[pre_start]);
+        const root = new TreeNode(preorder[pre_start]);
         let idx = hashmap.get(preorder[pre_start]);
         let leftSize = idx - in_start
-        root.left = maketree(pre_start+1, pre_start+leftSize, in_start, idx-1, root) // leftnode
-        root.right = maketree(pre_start+leftSize+1, pre_end, idx+1, in_end, root) // rightnode
+        root.left = maketree(pre_start+1, pre_start+leftSize, in_start, idx-1) // leftnode
+        root.right = maketree(pre_start+leftSize+1, pre_end, idx+1, in_end) // rightnode
         return root;
     }
 
