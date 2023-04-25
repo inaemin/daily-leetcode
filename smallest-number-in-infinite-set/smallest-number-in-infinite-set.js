@@ -1,12 +1,23 @@
 var SmallestInfiniteSet = function() {
-    this.set = [...Array(1000)].map((el, idx) => idx + 1);
+    this.hash = {};
+    this.smallest = 1;
+    for (let i=1; i<=1000; i++) {
+        this.hash[i] = 1;
+    }
 };
 
 /**
  * @return {number}
  */
 SmallestInfiniteSet.prototype.popSmallest = function() {
-    return this.set.shift()
+    while (this.smallest <= 1000) {
+        if (this.hash[this.smallest] === 1) {
+            this.hash[this.smallest] = 0;
+            return this.smallest;
+        } else {
+            this.smallest += 1;
+        }
+    }
 };
 
 /** 
@@ -14,12 +25,9 @@ SmallestInfiniteSet.prototype.popSmallest = function() {
  * @return {void}
  */
 SmallestInfiniteSet.prototype.addBack = function(num) {
-    for (let i=0; i<this.set.length; i++) {
-        if (this.set[i] === num) return;
-        else if (this.set[i] > num) {
-            this.set.splice(i, 0, num);
-            return;
-        }
+    if (this.hash[num] === 0) {
+        this.hash[num] = 1;
+        if (num < this.smallest) this.smallest = num;
     }
 };
 
