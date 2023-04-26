@@ -3,9 +3,8 @@
  * @return {number}
  */
 var addDigits = function(num) {
-    num = num.toString()
-    while (num.length > 1) {
-        num = num.split("").reduce((r, e) => r + Number(e), 0).toString()
+    while (num >= 10) {
+        num = num.toString().split("").reduce((r, e) => r + Number(e), 0)
     }
-    return Number(num);
-};
+    return num;
+}
