@@ -7,8 +7,9 @@ var numSimilarGroups = function(strs) {
       let cnt = 0;
       for (let i=0; i<s1.length; i++) {
         if (s1[i] !== s2[i]) cnt += 1;
+        if (cnt > 2) return false;
       }
-      return cnt === 2;
+      return true;
     }
 
     let group = 0;
@@ -17,11 +18,10 @@ var numSimilarGroups = function(strs) {
       if (visited.has(str)) return;
       visited.add(str);
       for (let next of strs) {
-        if (!visited.has(next) && isSimilar(str, next)) {
-          dfs(next)
-        }
+        if (!visited.has(next) && isSimilar(str, next)) dfs(next);
       }
     }
+    
     for (let str of strs) {
       if (!visited.has(str)) {
         dfs(str)
