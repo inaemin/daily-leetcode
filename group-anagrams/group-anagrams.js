@@ -6,13 +6,11 @@ var groupAnagrams = function(strs) {
     const obj = {};
     const countStr = (s) => {
         const alphabet_table = {};
-        'abcdefghijklmnopqrstuvwxyz'.split("").forEach(el => alphabet_table[el] = 0);
-        s.split("").forEach(el => alphabet_table[el] += 1)
-        let answer = Object.keys(alphabet_table).reduce((r, e) => {
-            if (alphabet_table[e] !== 0) r += `${e}${alphabet_table[e]}`;
-            return r;
-        }, "")
-        return answer;
+        s.split("").forEach(el => {
+            if (alphabet_table[el] === undefined) alphabet_table[el] = 1;
+            else alphabet_table[el] += 1;
+        })
+        return Object.keys(alphabet_table).sort().reduce((r, e) => r + `${e}${alphabet_table[e]}`, "");
     }
 
     strs.forEach(el => {
