@@ -3,20 +3,23 @@
  * @return {string[][]}
  */
 var groupAnagrams = function(strs) {
-    const obj = {};
+    const obj = new Map();
     const countStr = (s) => {
-        const alphabet_table = {};
-        s.split("").forEach(el => {
-            if (alphabet_table[el] === undefined) alphabet_table[el] = 1;
-            else alphabet_table[el] += 1;
-        })
-        return Object.keys(alphabet_table).sort().reduce((r, e) => r + `${e}${alphabet_table[e]}`, "");
+        const alphabet_table = new Map();
+        'abcdefghijklmnopqrstuvwxyz'.split("").forEach(el => alphabet_table.set(el, 1));
+        s.split("").forEach(el => alphabet_table.set(el, alphabet_table.get(el) + 1));
+
+        let answer = "";
+        for (let e of alphabet_table.keys()) {
+            if (alphabet_table.get(e) !== 0) answer += `${e}${alphabet_table.get(e)}`
+        }
+        return answer;
     }
 
     strs.forEach(el => {
-        if (obj[countStr(el)] === undefined) obj[countStr(el)] = [el];
-        else obj[countStr(el)].push(el);
+        if (obj.get(countStr(el)) === undefined) obj.set(countStr(el), [el])
+        else obj.set(countStr(el), [...obj.get(countStr(el)), el])
     })
 
-    return Object.values(obj);
+    return Array.from(obj.values());
 };
