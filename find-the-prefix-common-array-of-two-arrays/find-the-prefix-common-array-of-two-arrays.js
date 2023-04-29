@@ -3,50 +3,17 @@
  * @param {number[]} B
  * @return {number[]}
  */
-var findThePrefixCommonArray = function(a, b) {
-     let stack = [];
-        let out = [];
-        let count = 0 ; 
-        
-        for ( let i = 0 ; i < a.length ; i ++)
-        {
-            const item1 = a[i];
-            const item2 = b[i];
-
-            if(!stack.length)
-            {
-                if(item1 === item2)
-                {
-                    count++;
-                    out.push(count);
-                }
-                else
-                {
-                    out.push(count)
-                    stack.push(item1);
-                    stack.push(item2);
-                }
-            }
-            else
-            {
-                count = 0 ;
-                if(item1 === item2)
-                {
-                    count++;
-                    out.push(count + out[out.length-1]);
-                    stack.push(item1)
-                }
-                else
-                {
-                    if(stack.includes(item1))count++;
-                    if(stack.includes(item2))count++;
-
-                    stack.push(item1);
-                    stack.push( item2);
-                     out.push(count + out[out.length-1]);
-                }
-            }
+var findThePrefixCommonArray = function(A, B) {
+    const setA = new Set();
+    const C = [];
+    for (let i=0; i<A.length; i++) {
+        setA.add(A[i]);
+        let cnt = 0;
+        for (let j=0; j<=i; j++) {
+            if (setA.has(B[j])) cnt += 1;
         }
+        C[i] = cnt;
+    }
     
-    return out;
+    return C;
 };
