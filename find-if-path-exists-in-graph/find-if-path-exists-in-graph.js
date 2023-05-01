@@ -5,24 +5,41 @@
  * @param {number} destination
  * @return {boolean}
  */
-var validPath = function(n, edges, source, destination) {
-    const vertices = [];
-    edges.forEach((edge) => {
-        const [x, y] = edge;
-        if (vertices[x] === undefined) vertices[x] = [y]
-        else vertices[x].push(y);
-        if (vertices[y] === undefined) vertices[y] = [x];
-        else vertices[y].push(x);
-    })
 
-    if (source === destination) return true;
-    const visited = new Set();
-    const stack = [...vertices[source]];
-    while (stack.length) {
-        const next = stack.pop();
-        if (next === destination) return true;
-        visited.add(next);
-        stack.push(...vertices[next].filter(el => !visited.has(el)))        
+ class UnionFind {
+     constructor(n) {
+         this.arr = new Array(n);
+         for (let i=0; i<n; i++) {
+             this.arr[i] = i;
+         }
+     }
+
+     find(x) {
+         if (this.arr[x] !== x) {
+             this.arr[x] = this.find(this.arr[x])
+         }
+         return this.arr[x];
+     }
+
+     union (x, y) {
+         let px = this.find(x);
+         let py = this.find(y);
+         if (px !== py) {
+             if (px < py) {
+                 this.arr[py] = px;
+             } else {
+                 this.arr[px] = py;
+             }
+         }``
+     }
+ }
+
+var validPath = function(n, edges, source, destination) {
+    const uf = new UnionFind(n);
+    for (let i=0; i<edges.length; i++) {
+        const [x, y] = edges[i];
+        uf.union(x, y);
     }
-    return false;        
+
+    return uf.find(source) === uf.find(destination)
 };
