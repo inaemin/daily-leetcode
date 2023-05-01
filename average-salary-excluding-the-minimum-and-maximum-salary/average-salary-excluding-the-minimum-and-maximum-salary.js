@@ -3,8 +3,13 @@
  * @return {number}
  */
 var average = function(salary) {
-    salary.sort((a, b) => a - b);
-    salary.shift();
-    salary.pop();
-    return salary.reduce((r, e) => r + e, 0) / (salary.length)
+    let min = salary[0]; max = salary[0];
+    let sum = 0;
+    for (let sal of salary) {
+        if (sal < min) min = sal;
+        if (sal > max) max = sal;
+        sum += sal;
+    }
+    sum = sum - min - max;
+    return sum / (salary.length-2)
 };
