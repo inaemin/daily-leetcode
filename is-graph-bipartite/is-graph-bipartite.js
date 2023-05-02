@@ -6,7 +6,7 @@ var isBipartite = function(graph) {
     const n = graph.length
     const color = Array(n).fill(0);
     for (let i=0; i<graph.length; i++) {
-        if (color[i] === 0) {
+        if (color[i] === 0 && graph[i].length) {
             const stack = [];
             stack.push(i);
             color[i] = 1;
@@ -18,9 +18,7 @@ var isBipartite = function(graph) {
                     if (color[connect] === 0) {
                         stack.push(connect);
                         color[connect] = next_color
-                    } else {
-                        if (color[connect] !== 0 && color[connect] !== next_color) return false;
-                    }
+                    } else if (color[connect] !== 0 && color[connect] !== next_color) return false;
                 }
             }
         }
