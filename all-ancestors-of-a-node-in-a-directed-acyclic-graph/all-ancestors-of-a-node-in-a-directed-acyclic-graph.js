@@ -14,7 +14,7 @@ var getAncestors = function(n, edges) {
 
     const queue = [];
     const ancestor = [...Array(n)].map(el => new Set());
-    console.log(indegree, node);
+
     for (let i=0; i<indegree.length; i++) {
         if (indegree[i] === 0) {
             queue.push(i);
@@ -35,6 +35,6 @@ var getAncestors = function(n, edges) {
             }
         });
     }
-    console.log(indegree);
+
     return ancestor.map(el => Array.from(el).sort((a, b) => a - b));
 };
