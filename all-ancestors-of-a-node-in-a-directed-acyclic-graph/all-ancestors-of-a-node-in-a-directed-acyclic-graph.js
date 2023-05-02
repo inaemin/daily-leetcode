@@ -4,8 +4,8 @@
  * @return {number[][]}
  */
 var getAncestors = function(n, edges) {
-    const indegree = [...Array(n)].fill(0);
-    const node = [...Array(n)].map(el => new Array());
+    const indegree = Array(n).fill(0);
+    const node = Array.from({ length: n }, () => new Array());
     edges.forEach((edge) => {
         const [x, y] = edge;
         indegree[y] += 1;
@@ -13,8 +13,7 @@ var getAncestors = function(n, edges) {
     })
 
     const queue = [];
-    const ancestor = [...Array(n)].map(el => new Set());
-
+    const ancestor = Array.from({ length: n }, () => new Set());
     for (let i=0; i<indegree.length; i++) {
         if (indegree[i] === 0) {
             queue.push(i);
