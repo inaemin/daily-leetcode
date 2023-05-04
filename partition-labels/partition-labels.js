@@ -3,21 +3,21 @@
  * @return {number[]}
  */
 var partitionLabels = function(s) {
-    const map = {};
+    const map = new Map();
     for (let i=0; i<s.length; i++) {
-        map[s[i]] = i;
+        map.set(s[i], i);
     }
 
     const result = [];
     let startIdx = 0;
-    let lastIdx = map[s[0]];
+    let lastIdx = map.get(s[0]);
     while (startIdx !== s.length) {
         for (let i=startIdx; i<=lastIdx; i++) {
-            if (map[s[i]] > lastIdx) lastIdx = map[s[i]];
+            if (map.get(s[i]) > lastIdx) lastIdx = map.get(s[i]);
         }
         result.push(lastIdx-startIdx+1);
         startIdx = lastIdx + 1;
-        lastIdx = map[s[startIdx]];
+        lastIdx = map.get(s[startIdx]);
     }
 
     return result;
