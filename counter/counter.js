@@ -3,14 +3,10 @@
  * @return {Function} counter
  */
 var createCounter = function(n) {
-    const result = [];
+    const arr = [];
     return function() {
-        if (result.length) {
-            result.push(result[result.length-1] + 1);
-        } else {
-            result.push(n);
-        }
-        return result[result.length - 1]
+        arr.length ? arr.push(arr[arr.length-1] + 1) : arr.push(n);
+        return arr[arr.length - 1];
     };
 };
 
