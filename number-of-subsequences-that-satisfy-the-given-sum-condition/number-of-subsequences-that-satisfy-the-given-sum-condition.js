@@ -6,8 +6,10 @@
 var numSubseq = function(nums, target) {
     const mod = 10 ** 9 + 7;
     const pow = [1, 2];
-    for (let i=2; i<nums.length; i++) {
-        pow.push(pow[i-1] * 2 % mod)
+    let i = 2;
+    while (i <= nums.length) {
+        pow.push(pow[i-1] * 2 % mod);
+        i++;
     }
 
     let answer = 0;
