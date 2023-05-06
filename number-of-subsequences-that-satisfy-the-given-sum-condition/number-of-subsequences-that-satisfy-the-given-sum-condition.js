@@ -15,12 +15,10 @@ var numSubseq = function(nums, target) {
                 break;
             } else max = j;
         }
-        console.log(min, max);
         if (min <= max) {
             let len = max - min;
             if (len === 0) answer += BigInt(1);
             else answer += BigInt(2) ** BigInt(len) % mod;
-            console.log(answer);
         }
     }
 
