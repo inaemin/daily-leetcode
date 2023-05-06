@@ -3,10 +3,9 @@
  * @return {Function} counter
  */
 var createCounter = function(n) {
-    const arr = [];
+    let cnt = n;
     return function() {
-        arr.length ? arr.push(arr[arr.length-1] + 1) : arr.push(n);
-        return arr[arr.length - 1];
+        return cnt++;
     };
 };
 
