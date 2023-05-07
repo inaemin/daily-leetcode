@@ -3,16 +3,20 @@ class FrequencyTracker {
         this.elements = {};
         this.count = {};
     }
+
+    _incrementCount(counts, n) {
+        counts[n] = (counts[n] || 0) + 1;
+    }
     
     add(n) {
         if (this.elements[n] === undefined) {
             this.elements[n] = 1;
-            this.count[1] = this.count[1] === undefined ? 1 : this.count[1] + 1;
+            this._incrementCount(this.count, 1);
         }
         else {
             this.elements[n] += 1;
-            this.count[this.elements[n]] = this.count[this.elements[n]] === undefined ? 1 : this.count[this.elements[n]] + 1;
-            this.count[this.elements[n]-1] = this.count[this.elements[n]-1] - 1;
+            this._incrementCount(this.count, this.elements[n]);
+            this.count[this.elements[n]-1] -= 1;
         }
     }
     
@@ -24,7 +28,7 @@ class FrequencyTracker {
             }
             else {
                 this.elements[n] -= 1;
-                this.count[this.elements[n]] = this.count[this.elements[n]] === undefined ? 1 : this.count[this.elements[n]] + 1;
+                this._incrementCount(this.count, this.elements[n]);
                 this.count[this.elements[n] + 1] -= 1;
             }
         }
