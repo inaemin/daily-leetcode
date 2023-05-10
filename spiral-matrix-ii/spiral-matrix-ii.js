@@ -5,7 +5,6 @@
 var generateMatrix = function(n) {
     const dp = [...Array(n)].map(el => new Array(n).fill(0));
     const isEnded = (i, j) => {
-        console.log(i, j)
         if (j+1<n && dp[i][j+1] === 0) return [i, j+1, "right"];
         else if (i+1<n && dp[i+1][j] === 0) return [i+1, j, "down"]
         else if (j-1>=0 && dp[i][j-1] === 0) return [i, j-1, "left"]
