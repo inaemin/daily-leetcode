@@ -5,9 +5,8 @@
 var compose = function(functions) {
 	return function(x) {
         let answer = x;
-        functions.reverse();
-        for (let func of functions) {
-            answer = func(answer)
+        for (let i=functions.length-1; i>=0; i--) {
+            answer = functions[i](answer)
         }
         return answer;
     }
