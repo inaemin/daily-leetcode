@@ -3,17 +3,12 @@
  * @return {number}
  */
 var mostPoints = function(questions) {
-    const dp = [...Array(2)].map(el => new Array(questions.length).fill(0));
-    let max = 0;
-    for (let i=0; i<questions.length; i++) {
-        const [point, rest] = questions[i]
-        dp[1][i] = Math.max(dp[1][i-1] || 0, dp[1][i])
-        dp[0][i] = dp[1][i] + point;
-        if (dp[0][i] > max) max = dp[0][i];
-        if (i+rest+1 < questions.length) {
-            dp[1][i+rest+1] = Math.max(dp[0][i], dp[1][i+rest+1]);
-        }
+    const n = questions.length;
+    const dp = Array(n+1).fill(0);
+    for (let i=n-1; i>=0; i--) {
+        let j = Math.min(n, i+questions[i][1]+1);
+        dp[i] = Math.max(dp[i+1], dp[j]+questions[i][0])
     }
 
-    return max;
+    return dp[0];
 };
