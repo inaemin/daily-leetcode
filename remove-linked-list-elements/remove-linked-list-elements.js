@@ -11,6 +11,22 @@
  * @return {ListNode}
  */
 var removeElements = function(head, val) {
+    // iterative solution
+    // const dummy = new ListNode(0, head);
+    // let prev = dummy
+    // let curr = dummy.next
+    // while (curr) {
+    //     if (curr.val === val) {
+    //         prev.next = curr.next;
+    //         curr = curr.next;
+    //     } else {
+    //         prev = prev.next;
+    //         curr = curr.next;
+    //     }
+    // }
+
+    // return dummy.next;
+
     // recursive solution
     const recur = (node) => {
         if (!node) return null;
