@@ -11,20 +11,12 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-    const answer = new ListNode();
-    let curr = answer;
-    let n1 = l1;
-    let n2 = l2;
-    while (n1 || n2) {
-        const carry = Math.floor((curr.val + (n1?.val || 0) + (n2?.val || 0)) / 10);
-        const remainder = (curr.val + (n1?.val || 0) + (n2?.val || 0)) % 10;
-        curr.val = remainder;
-        if (n1) n1 = n1.next;
-        if (n2) n2 = n2.next;
-        if (n1 || n2 || carry > 0) {
-            curr.next = new ListNode(carry);
-            curr = curr.next;
-        }
+    const recur = (n1, n2, carry=0) => {
+        if (!n1 && !n2 && !carry) return null;
+        const sum = (n1?.val || 0) + (n2?.val || 0) + carry;
+        const next = recur(n1?.next, n2?.next, Math.floor(sum/10));
+        return new ListNode(sum % 10, next);
     }
-    return answer;
+
+    return recur(l1, l2);
 };
