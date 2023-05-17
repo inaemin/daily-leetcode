@@ -10,18 +10,22 @@
  * @return {number}
  */
 var pairSum = function(head) {
-    const arr = [];
-    let curr = head;
-    while (curr) {
-        arr.push(curr.val);
-        curr = curr.next;
+    let slow = head;
+    let fast = head;
+    let pre = null;
+    while (fast && fast.next) {
+        fast = fast.next.next;
+        const post = slow.next;
+        slow.next = pre;
+        pre = slow;
+        slow = post;
     }
-    const mid = arr.length/2 - 1
+    
     let max = 0;
-    for (let i=0; i<=mid; i++) {
-        if (arr[mid-i] + arr[mid+1+i] > max) {
-            max = arr[mid-i] + arr[mid+1+i];
-        }
+    while (pre) {
+        if (pre.val + slow.val > max) max = pre.val + slow.val;
+        pre = pre.next;
+        slow = slow.next;
     }
     return max;
 };
