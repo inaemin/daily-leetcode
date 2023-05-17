@@ -20,10 +20,10 @@ var pairSum = function(head) {
         pre = slow;
         slow = post;
     }
-    
     let max = 0;
     while (pre) {
-        if (pre.val + slow.val > max) max = pre.val + slow.val;
+        const sum = pre.val + slow.val;
+        if (sum > max) max = sum;
         pre = pre.next;
         slow = slow.next;
     }
