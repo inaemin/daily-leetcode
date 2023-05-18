@@ -1,6 +1,5 @@
 var TimeLimitedCache = function() {
     this.map = new Map();
-    this.timer;
 };
 
 /** 
@@ -11,15 +10,11 @@ var TimeLimitedCache = function() {
  */
 TimeLimitedCache.prototype.set = function(key, value, duration) {
     if (this.map.has(key)) {
-        this.map.set(key, value);
-        clearTimeout(this.timer);
-        const timer = setTimeout(() => this.map.delete(key), duration);
-        this.timer = timer;
+        clearTimeout(this.map.get(key).timer)
+        this.map.set(key, {value, timer: setTimeout(() => this.map.delete(key), duration)});
         return true;
     }
-    this.map.set(key, value);
-    const timer = setTimeout(() => this.map.delete(key), duration);
-    this.timer = timer;
+    this.map.set(key, {value, timer: setTimeout(() => this.map.delete(key), duration)});
     return false;
 };
 
@@ -28,7 +23,7 @@ TimeLimitedCache.prototype.set = function(key, value, duration) {
  * @return {number} value associated with key
  */
 TimeLimitedCache.prototype.get = function(key) {
-    return this.map.get(key) || -1;
+    return this.map.has(key) ? this.map.get(key).value : -1;
 };
 
 /** 
