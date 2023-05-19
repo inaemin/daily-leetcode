@@ -10,7 +10,6 @@ var isBipartite = function(graph) {
         if (colors[i] === color) return true;
         const stack = [...graph[i]];
         colors[i] = color;
-        console.log(colors)
         while (stack.length) {
             if (!dfs(stack.pop(), color*-1)) return false;
         }
