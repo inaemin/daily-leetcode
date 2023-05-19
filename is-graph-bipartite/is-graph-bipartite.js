@@ -3,26 +3,22 @@
  * @return {boolean}
  */
 var isBipartite = function(graph) {
-    const n = graph.length
-    const color = Array(n).fill(0);
-    for (let i=0; i<graph.length; i++) {
-        if (color[i] === 0 && graph[i].length) {
-            const stack = [];
-            stack.push(i);
-            color[i] = 1;
-            while (stack.length) {
-                let curr = stack.pop();
-                let connects = graph[curr];
-                let next_color = color[curr] * -1;
-                for (let connect of connects) {
-                    if (color[connect] === 0) {
-                        stack.push(connect);
-                        color[connect] = next_color
-                    } else if (color[connect] !== 0 && color[connect] !== next_color) return false;
-                }
-            }
+    const n = graph.length;
+    const colors = Array(n).fill(0);
+    const dfs = (i, color) => {
+        if (colors[i] === color*-1) return false;
+        if (colors[i] === color) return true;
+        const stack = [...graph[i]];
+        colors[i] = color;
+        console.log(colors)
+        while (stack.length) {
+            if (!dfs(stack.pop(), color*-1)) return false;
         }
+        return true;
     }
 
+    for (let i=0; i<n; i++) {
+        if (colors[i] === 0 && !dfs(i, 1)) return false;
+    }
     return true;
 };
