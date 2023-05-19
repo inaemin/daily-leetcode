@@ -12,19 +12,19 @@
  */
 var removeNthFromEnd = function(head, n) {
     const dummy = new ListNode(0, head);
-    let one = dummy;
-    let two = dummy.next.next;
-    let three = two;
-    for (let i=0; i<=n-2; i++) {
-        three = three.next;
+    let prev = dummy;
+    let remove = dummy.next;
+    let tail = dummy;
+    for (let i=0; i<=n; i++) {
+        tail = tail.next;
     }
 
-    while (three) {
-        one = one.next;
-        two = two.next;
-        three = three.next;
+    while (tail) {
+        prev = prev.next;
+        remove = remove.next;
+        tail = tail.next;
     }
 
-    one.next = two;
+    prev.next = remove.next;
     return dummy.next;
 };
