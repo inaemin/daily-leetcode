@@ -4,22 +4,17 @@
  * @return {Function}
  */
 var throttle = function(fn, t) {
-    let timer;
-    let memo = [];
-    return function(...args) {
-        if (!timer) {
-            fn(...args);
-            timer = setInterval(() => {
-                if (memo.length) {
-                    fn(...memo.pop())
-                } else {
-                    clearInterval(timer);
-                    timer = null;
-                }
-            }, t);
-        } else {
-            memo = [args];
-        }
+    let timer
+    let cache
+    return function throttled(...args) {
+        cache = args;
+        if (timer) return;
+        fn(...cache);
+        cache = null;
+        timer = setTimeout(() => {
+            timer = null;
+            if (cache) throttled(...cache);
+        }, t)
     }
 };
 
