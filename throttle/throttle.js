@@ -4,8 +4,8 @@
  * @return {Function}
  */
 var throttle = function(fn, t) {
-    let timer
     let cache
+    let timer
     return function throttled(...args) {
         cache = args;
         if (timer) return;
