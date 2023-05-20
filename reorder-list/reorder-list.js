@@ -31,20 +31,10 @@ var reorderList = function(head) {
     }
     l2 = prev;
 
-    const answer = new ListNode();
-    let pos = answer;
-    while (l1 || l2) {
-        if (l1) {
-            pos.next = l1;
-            l1 = l1.next;
-            pos = pos.next;
-        }
-        if (l2) {
-            pos.next = l2;
-            l2 = l2.next;
-            pos = pos.next;
-        }
+    while (l2) {
+        const next = l1.next;
+        l1.next = l2;
+        l1 = l1.next;
+        l2 = next;
     }
-
-    return answer.next;
 };
