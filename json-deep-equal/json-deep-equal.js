@@ -15,10 +15,7 @@ var areDeeplyEqual = function(o1, o2) {
         if (typeof o1[key[i]] !== typeof o2[key[i]]) return false;
         if (typeof o1[key[i]] !== "object" && typeof o2[key[i]] !== "object" && o1[key[i]] !== o2[key[i]]) return false;
         if (typeof o1[key[i]] === "object" && typeof o2[key[i]] === "object" && o1[key[i]] && o2[key[i]]) {
-            const child_key = Object.keys(o2[key[i]]);
-            for (let j=0; j<child_key.length; j++) {
-                if (!areDeeplyEqual(o1[key[i]][child_key[j]], o2[key[i]][child_key[j]])) return false;
-            }
+            if (!areDeeplyEqual(o1[key[i]], o2[key[i]])) return false;
         }
     }
     return true;
