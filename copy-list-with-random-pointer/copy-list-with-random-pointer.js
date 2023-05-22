@@ -12,23 +12,24 @@
  * @return {Node}
  */
 var copyRandomList = function(head) {
-    // node의 정보들이 들어있는 hashmap 이용하기
-    const nodes = new Map();
-    const dummy = new Node();
-    let oldcurr = head;
-    let newcurr = dummy
-    while (oldcurr) {
-        newcurr.next = new Node(oldcurr.val);
-        newcurr = newcurr.next;
-        nodes.set(oldcurr, newcurr); // old - new
-        oldcurr = oldcurr.next;
+    // hashmap을 사용하지 않고 풀어보기
+    // 각 노드의 clone 만들어주기
+    let curr = head;
+    while (curr) {
+        const next = curr.next;
+        curr.clone = new Node(curr.val, null, null);
+        curr = curr.next;
     }
-    oldcurr = head;
-    newcurr = dummy.next;
-    while (oldcurr) {
-        newcurr.random = nodes.get(oldcurr.random);
-        oldcurr = oldcurr.next;
-        newcurr = newcurr.next;
+    
+    // dummy와 clone노드 연결하면서 random과도 연결하기
+    const dummy = new Node();
+    curr = head;
+    let clone = dummy;
+    while (curr) {
+        clone.next = curr.clone;
+        clone = clone.next;
+        clone.random = curr.random?.clone;
+        curr = curr.next;
     }
     return dummy.next;
 };
