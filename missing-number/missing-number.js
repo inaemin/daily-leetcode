@@ -11,7 +11,8 @@ var missingNumber = function(nums) {
     const n = nums.length;
     let answer = n;
     for (let i=0; i<n; i++) {
-        answer ^= nums[i] ^ i;
+        answer ^= nums[i];
+        answer ^= i;
     }
     return answer;
 };
