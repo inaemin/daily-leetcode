@@ -3,7 +3,7 @@
  * @return {number}
  */
 var countPrimes = function(n) {
-    if (n === 0 || n === 1) return 0;
+    if (n <= 1) return 0;
     const arr = Array(n).fill(true);
     let cnt = 0;
     for (let i=2; i<n; i++) {
