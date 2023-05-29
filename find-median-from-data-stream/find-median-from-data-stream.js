@@ -8,18 +8,16 @@ var MedianFinder = function() {
  * @return {void}
  */
 MedianFinder.prototype.addNum = function(num) {
-    if (this.max_heap.front() === null && this.min_heap.front() === null) {
-        this.max_heap.enqueue(num);
-    } else if (this.max_heap.front().element >= num) {
+    if (this.max_heap.isEmpty() && this.min_heap.isEmpty() || this.max_heap.front().element >= num) {
         this.max_heap.enqueue(num);
     } else this.min_heap.enqueue(num);
 
     if (this.max_heap.size() - this.min_heap.size() >= 2) {
-        const pop = this.max_heap.dequeue();
-        this.min_heap.enqueue(pop.element);
+        const element = this.max_heap.dequeue().element;
+        this.min_heap.enqueue(element);
     } else if (this.min_heap.size() - this.max_heap.size() >= 2) {
-        const pop = this.min_heap.dequeue();
-        this.max_heap.enqueue(pop.element);
+        const element = this.min_heap.dequeue().element;
+        this.max_heap.enqueue(element);
     }
 };
 
@@ -29,9 +27,8 @@ MedianFinder.prototype.addNum = function(num) {
 MedianFinder.prototype.findMedian = function() {
     const max_size = this.max_heap.size();
     const min_size = this.min_heap.size();
-    if ((max_size + min_size) % 2 === 0) {
-        const avg = (this.min_heap.front().element + this.max_heap.front().element)/2
-        return parseFloat(avg.toFixed(5));
+    if (max_size === min_size) {
+        return (this.min_heap.front().element + this.max_heap.front().element)/2
     } else {
         if (max_size > min_size) return this.max_heap.front().element;
         return this.min_heap.front().element;
