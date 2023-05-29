@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 var checkIfInstanceOf = function(obj, classFunction) {
-    if (obj === null || obj === undefined || !classFunction) return false
+    if (obj === null || obj === undefined || typeof classFunction !== "function") return false
     if (obj === classFunction.prototype) return true;
     return checkIfInstanceOf(obj.__proto__, classFunction);
 };
