@@ -5,8 +5,7 @@
  */
 var checkIfInstanceOf = function(obj, classFunction) {
     if (obj === null || obj === undefined || typeof classFunction !== "function") return false
-    if (obj === classFunction.prototype) return true;
-    return checkIfInstanceOf(obj.__proto__, classFunction);
+    return Object(obj) instanceof classFunction
 };
 
 /**
