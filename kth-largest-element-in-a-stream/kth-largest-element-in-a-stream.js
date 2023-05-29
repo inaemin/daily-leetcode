@@ -5,10 +5,7 @@
 var KthLargest = function(k, nums) {
     this.heap = new MinPriorityQueue();
     this.limit = k;
-    for (let num of nums) {
-        this.heap.enqueue(num);
-        if (this.heap.size() > k) this.heap.dequeue();
-    }
+    for (let num of nums) this.add(num);
 };
 
 /** 
