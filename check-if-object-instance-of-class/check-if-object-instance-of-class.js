@@ -1,0 +1,14 @@
+/**
+ * @param {any} obj
+ * @param {any} classFunction
+ * @return {boolean}
+ */
+var checkIfInstanceOf = function(obj, classFunction) {
+    if (obj === null || obj === undefined || !classFunction) return false
+    if (obj === classFunction.prototype) return true;
+    return checkIfInstanceOf(obj.__proto__, classFunction);
+};
+
+/**
+ * checkIfInstanceOf(new Date(), Date); // true
+ */
