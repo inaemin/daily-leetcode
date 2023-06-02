@@ -1,20 +1,20 @@
 class EventEmitter {
     constructor() {
-        this.map = new Map();
+        this.map = {};
     }
-    
+
     subscribe(event, cb) {
-        if (this.map.has(event)) this.map.set(event, [...this.map.get(event), cb]);
-        else this.map.set(event, [cb]);
+        if (this.map[event]) this.map[event].push(cb);
+        else this.map[event] = [cb]
         return {
             unsubscribe: () => {
-                this.map.set(event, this.map.get(event).slice(1));
+                this.map[event].shift();
             }
         };
     }
 
     emit(event, args = []) {
-        const cb = this.map.get(event);
+        const cb = this.map[event];
         if (cb) return cb.reduce((res, ele) => [...res, ele(...args)], [])
         return [];
     }
