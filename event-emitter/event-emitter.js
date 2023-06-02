@@ -15,7 +15,7 @@ class EventEmitter {
 
     emit(event, args = []) {
         const cb = this.map[event];
-        if (cb) return cb.reduce((res, ele) => [...res, ele(...args)], [])
+        if (cb) return cb.map(el => el(...args));
         return [];
     }
 }
