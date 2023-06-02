@@ -3,11 +3,10 @@
  */
 var ArrayWrapper = function(nums) {
     this.arr = nums;
-    this.sum = nums.reduce((res, ele) => res + ele, 0);
 };
 
 ArrayWrapper.prototype.valueOf = function() {
-    return this.sum;
+    return this.arr.reduce((res, ele) => res + ele, 0);
 }
 
 ArrayWrapper.prototype.toString = function() {
