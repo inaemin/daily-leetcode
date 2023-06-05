@@ -2,55 +2,30 @@
  * @param {number[][]} isConnected
  * @return {number}
  */
- class UnionFind {
-     constructor(n) {
-         this.arr = new Array(n);
-         for (let i=0; i<n; i++) {
-             this.arr[i] = i;
-         }
-         this.count = n;
-     }
-
-     find(x) {
-         if (this.arr[x] !== x) {
-             this.arr[x] = this.find(this.arr[x])
-         }
-         return this.arr[x];
-     }
-
-     union (x, y) {
-         let px = this.find(x);
-         let py = this.find(y);
-         if (px !== py) {
-             if (px < py) {
-                 this.arr[py] = px;
-             } else {
-                 this.arr[px] = py;
-             }
-             this.count--;
-         }
-     }
-
-     size() {
-         return this.count;
-     }
- }
-
-
 var findCircleNum = function(isConnected) {
-    const n = isConnected.length;
-    const edges = [];
-    isConnected.forEach((connect, idx) => {
-        for (let i=idx + 1; i<connect.length; i++) {
-            if (connect[i] === 1) edges.push([idx, i]);
-        }
-    })
-
-    const uf = new UnionFind(n);
-    for (let i=0; i<edges.length; i++) {
-        const [x, y] = edges[i];
-        uf.union(x, y);
+    const bfs = (arr) => {
+        while (arr.length) {
+            const next = arr.shift();
+            const connect = isConnected[next];
+            for (let j=0; j<connect.length; j++) {
+                if (!visited.has(j) && connect[j] === 1) {
+                    visited.add(j);
+                    arr.push(j);
+                }
+            }
+        }        
     }
 
-    return uf.size();
+    let answer = 0;
+    const visited = new Set();
+    for (let i=0; i<isConnected.length; i++) {
+        if (!visited.has(i)) {
+            const queue = [i];
+            visited.add(i);
+            answer += 1;
+            bfs(queue)
+        }
+    }
+
+    return answer;
 };
