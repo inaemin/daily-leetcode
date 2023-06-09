@@ -14,17 +14,17 @@ var countCompleteComponents = function(n, edges) {
     const visited = new Set();
     for (let i=0; i<n; i++) {
         if (!visited.has(i)) {
-            let status = true;
-            const subgraph = [i, ...graph[i]].sort((a, b) => a - b);
-            subgraph.forEach(el => visited.add(el)); // subgraph vetices 일단 visited에 추가.
-            for (let v of subgraph) {
-                const connected = [v, ...graph[v]].sort((a, b) => a - b);
-                if (!connected.every((ele, idx) => ele === subgraph[idx])) {
-                    status = false;
-                    break;
+            visited.add(i);
+            const queue = [i];
+            for (let q of queue) {
+                for (let v of graph[q]) {
+                    if (!visited.has(v)) {
+                        queue.push(v);
+                        visited.add(v)
+                    }
                 }
             }
-            if (status) answer++;
+            if (queue.every(el => graph[el].length === queue.length-1)) answer++;
         }
     }
 
