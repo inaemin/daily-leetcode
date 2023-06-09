@@ -5,11 +5,10 @@
  */
 var countCompleteComponents = function(n, edges) {
     const graph = [...Array(n)].map(el => new Array());
-    edges.forEach((el) => {
-        const [i, j] = el;
+    for (let [i, j] of edges) {
         graph[i].push(j);
         graph[j].push(i);
-    })
+    }
 
     let answer = 0;
     const visited = new Set();
@@ -17,10 +16,13 @@ var countCompleteComponents = function(n, edges) {
         if (!visited.has(i)) {
             let status = true;
             const subgraph = [i, ...graph[i]].sort((a, b) => a - b);
+            subgraph.forEach(el => visited.add(el)); // subgraph vetices 일단 visited에 추가.
             for (let v of subgraph) {
-                visited.add(v);
                 const connected = [v, ...graph[v]].sort((a, b) => a - b);
-                if (!connected.every((ele, idx) => ele === subgraph[idx])) status = false;
+                if (!connected.every((ele, idx) => ele === subgraph[idx])) {
+                    status = false;
+                    break;
+                }
             }
             if (status) answer++;
         }
