@@ -19,12 +19,7 @@ var smallestString = function(s) {
     answer = arr.join("a");
     
     if (!status) {
-        if (s[s.length-1] === "a") {
-            answer = s.slice(0, s.length-1) + "z"
-        } else {
-            answer = s.slice(0, s.length-1) + String.fromCharCode(s[s.length-1].charCodeAt(0) - 1)
-        }
-    }
-    
-    return answer;
+        if (s[s.length-1] === "a") return s.slice(0, s.length-1) + "z";
+        else return s.slice(0, s.length-1) + String.fromCharCode(s[s.length-1].charCodeAt(0) - 1);
+    } else return answer;
 };
