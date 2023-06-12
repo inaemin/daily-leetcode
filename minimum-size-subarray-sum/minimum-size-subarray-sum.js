@@ -6,18 +6,16 @@
 var minSubArrayLen = function(target, nums) {
     let answer = Infinity
     let i=0;
-    const subarr = [];
+    let j=0;
     let total = 0;
-    while (i < nums.length) {
-        if (total < target) {
-            total += nums[i];
-            subarr.push(nums[i]);
-        }
+    while (j < nums.length) {
+        total += nums[j];
         while (total >= target) {
-            answer = Math.min(answer, subarr.length);
-            total -= subarr.shift()
+            answer = Math.min(answer, j-i+1);
+            total -= nums[i];
+            i++
         }
-        i++
+        j++
     }
     return answer === Infinity ? 0 : answer;
 };
