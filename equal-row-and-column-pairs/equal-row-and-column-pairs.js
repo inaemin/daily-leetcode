@@ -15,23 +15,12 @@ var equalPairs = function(grid) {
     }
 
     let answer = 0;
-    const isEqual = (first, rest) => {
-        for (let el of column[first]) {
-            let status = true;
-            for (let i=0; i<n-1; i++) {
-                if (el[i] !== rest[i]) {
-                    status = false;
-                    break;
-                }
-            }
-            if (status) answer++
-        }
-    }
-
     for (let i=0; i<n; i++) {
         if (column[grid[i][0]]) {
             const [first, ...rest] = grid[i];
-            isEqual(first, rest);
+            column[first].forEach((element) => {
+                if (element.every((el, idx) => el === rest[idx])) answer++;
+            })
         }
     }
 
