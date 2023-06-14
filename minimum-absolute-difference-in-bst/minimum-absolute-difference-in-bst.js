@@ -22,7 +22,7 @@ var getMinimumDifference = function(root) {
     result.sort((a, b) => a - b);
     let answer = Infinity;
     for (let i=0; i<result.length-1; i++) {
-        answer = Math.min(answer, Math.abs(result[i] - result[i+1]));
+        answer = Math.min(answer, result[i+1] - result[i]);
     }
     return answer;
 };
