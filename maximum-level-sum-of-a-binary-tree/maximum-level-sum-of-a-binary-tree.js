@@ -11,8 +11,8 @@
  * @return {number}
  */
 var maxLevelSum = function(root) {
-    const result = {}
-    const bfs = (node, level=1) => {
+    const result = [];
+    const bfs = (node, level=0) => {
         const queue = [node];
         while (queue.length) {
             const next = queue.shift();
@@ -23,13 +23,5 @@ var maxLevelSum = function(root) {
         }
     }
     bfs(root);
-
-    const sum_result = {};
-    for (let i=0; i<Object.keys(result).length; i++) {
-        const level = Object.keys(result)[i];
-        const sum = result[level];
-        if (sum_result[sum]) sum_result[sum] = Math.min(sum_result[sum], level);
-        else sum_result[sum] = level;
-    }
-    return sum_result[Math.max(...Object.keys(sum_result))];
+    return result.indexOf(Math.max(...result)) + 1;
 };
