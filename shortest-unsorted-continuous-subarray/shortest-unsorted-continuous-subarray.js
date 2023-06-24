@@ -14,12 +14,10 @@ var findUnsortedSubarray = function(nums) {
           if (max === null) max = i;
           else if (nums[i] >= nums[max]) max = i;
       }
-      //if (nums[max] === nums[nums.length-1]) max = nums.length-1;
       if ((nums[i-1] || -Infinity) >= nums[i] && nums[i] <= (nums[i+1] || Infinity)) {
           if (min === null) min = i;
           else if (nums[i] <= nums[min]) min = i;
       }
-      //if (nums[min] === nums[nums.length-1]) min = nums.length-1;
   }
 
   if (status) return 0; // 이미 sorting되어 있는 경우.
@@ -40,6 +38,5 @@ var findUnsortedSubarray = function(nums) {
           break;
       }
   }
-  console.log(min, max, start, end)
   return end - start + 1;
 };
