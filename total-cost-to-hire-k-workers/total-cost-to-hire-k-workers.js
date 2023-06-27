@@ -18,11 +18,9 @@ var totalCost = function(costs, k, candidates) {
     let left_ps = 0, right_ps = costs.length-1;
     for (let i=0; i<candidates; i++) {
         if (left_ps <= right_ps) {
-            left.enqueue(costs[left_ps]);
-            left_ps++;
+            left.enqueue(costs[left_ps++]);
             if (left_ps <= right_ps) {
-                right.enqueue(costs[right_ps]);
-                right_ps--;
+                right.enqueue(costs[right_ps--]);
             }
         }
     }
@@ -44,11 +42,9 @@ var totalCost = function(costs, k, candidates) {
 
         if (left_ps <= right_ps) {
             if (status === "right") {
-                right.enqueue(costs[right_ps]);
-                right_ps--;
+                right.enqueue(costs[right_ps--]);
             } else if (status === "left") {
-                left.enqueue(costs[left_ps]);
-                left_ps++;
+                left.enqueue(costs[left_ps++]);
             }
         }
     }
