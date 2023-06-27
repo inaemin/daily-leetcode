@@ -6,6 +6,13 @@
  */
 var totalCost = function(costs, k, candidates) {
     let answer = 0;
+    if (candidates*2+k-1 >= costs.length) {
+        costs.sort((a, b) => a - b);
+        for (let i=0; i<k; i++) {
+            answer += costs[i];
+        }
+        return answer;
+    }
     const left = new MinPriorityQueue();
     const right = new MinPriorityQueue();
     let left_ps = 0, right_ps = costs.length-1;
