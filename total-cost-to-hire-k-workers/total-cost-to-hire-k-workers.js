@@ -17,35 +17,16 @@ var totalCost = function(costs, k, candidates) {
     const right = new MinPriorityQueue();
     let left_ps = 0, right_ps = costs.length-1;
     for (let i=0; i<candidates; i++) {
-        if (left_ps <= right_ps) {
-            left.enqueue(costs[left_ps++]);
-            if (left_ps <= right_ps) {
-                right.enqueue(costs[right_ps--]);
-            }
-        }
+        left.enqueue(costs[left_ps++]);
+        right.enqueue(costs[right_ps--]);
     }
     for (let i=0; i<k; i++) {
-        let status;
-        if (left.isEmpty()) {
-            status = "right"
+        if (left.front().element > right.front().element) {
             answer += right.dequeue().element;
-        } else if (right.isEmpty()) {
-            status = "left"
+            right.enqueue(costs[right_ps--]);
+        } else {
             answer += left.dequeue().element;
-        } else if (left.front().element > right.front().element) {
-            status = "right"
-            answer += right.dequeue().element;
-        } else if (left.front().element <= right.front().element) {
-            status = "left"
-            answer += left.dequeue().element;
-        }
-
-        if (left_ps <= right_ps) {
-            if (status === "right") {
-                right.enqueue(costs[right_ps--]);
-            } else if (status === "left") {
-                left.enqueue(costs[left_ps++]);
-            }
+            left.enqueue(costs[left_ps++]);
         }
     }
 
