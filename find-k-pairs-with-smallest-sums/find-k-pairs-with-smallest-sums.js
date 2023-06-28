@@ -5,22 +5,26 @@
  * @return {number[][]}
  */
 var kSmallestPairs = function(nums1, nums2, k) {
-    const heap = new MaxPriorityQueue({priority: (ele) => ele.val});
-    for (let i=0; i<nums1.length; i++) {
-        for (let j=0; j<nums2.length; j++) {
-            const ele = {
-                element: [nums1[i], nums2[j]],
-                val: nums1[i] + nums2[j]
+    const result = [];
+    const heap = new MinPriorityQueue({priority: (e) => e.val});
+    for (let n1 of nums1) {
+        const element = {
+            element: [n1, 0],
+            val: n1 + nums2[0]
+        }
+        heap.enqueue(element);
+    }
+    for (let i=0; i<Math.min(k, nums1.length*nums2.length); i++) {
+        const [n1, n2_idx] = heap.dequeue().element.element;
+        result.push([n1, nums2[n2_idx]]);
+        if (nums2[n2_idx+1]) {
+            const element = {
+                element: [n1, n2_idx+1],
+                val: n1 + nums2[n2_idx+1]
             }
-            if (heap.size() === k && ele.val > heap.front().element.val) break;
-            heap.enqueue(ele);
-            if (heap.size() > k) heap.dequeue();
+            heap.enqueue(element)
         }
     }
 
-    const result = [];
-    while (heap.size()) {
-        result.unshift(heap.dequeue().element.element)
-    }
     return result;
 };
