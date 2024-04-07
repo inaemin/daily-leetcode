@@ -4,5 +4,5 @@
  */
 var lengthOfLastWord = function(s) {
     const words = s.split(" ").filter(el => el.length > 0);
-    return words.at(-1).length
+    return words[words.length - 1].length;
 };
