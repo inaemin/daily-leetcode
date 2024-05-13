@@ -8,32 +8,21 @@ var matrixScore = function(grid) {
     for (let i=0; i<n; i++) {
         if (grid[i][0] !== 1) {
             for (let j=0; j<grid[i].length; j++) {
-                if (grid[i][j] === 1) {
-                    grid[i][j] = 0
-                } else {
-                    grid[i][j] = 1
-                }
+                grid[i][j] ^= 1
             }
         }
     }
 
     for (let j=1; j<m; j++) {
         let count1 = 0
-        let count0 = 0
         for (let i=0; i<n; i++) {
             if (grid[i][j] === 1) {
                 count1 += 1
-            } else {
-                count0 += 1
             }
         }
-        if (count0 > count1) {
+        if (count1 < n/2) {
             for (let i=0; i<n; i++) {
-                if (grid[i][j] === 1) {
-                    grid[i][j] = 0
-                } else {
-                    grid[i][j] = 1
-                }
+                grid[i][j] ^= 1
             }
         }
     }
