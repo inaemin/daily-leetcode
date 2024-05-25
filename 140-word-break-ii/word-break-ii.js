@@ -14,7 +14,6 @@ var wordBreak = function(s, wordDict) {
             result.push(str.trim());
             return;
         }
-        const arr = []
         for (let i=start; i<s.length; i++) {
             if (dict[s.slice(start, i+1)]) {
                 bt(i+1, str+" "+s.slice(start, i+1))
