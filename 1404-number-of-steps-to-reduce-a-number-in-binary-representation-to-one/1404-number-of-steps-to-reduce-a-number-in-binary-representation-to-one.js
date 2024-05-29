@@ -3,19 +3,36 @@
  * @return {number}
  */
 var numSteps = function(s) {
-    let num = BigInt("0b" + s);
-    let steps = 0;
-
-    while (num > 1n) {
-        if (num & 1n) { // 현재 비트가 1인지의 여부
-            // 현재 비트가 1인 경우, 1을 더합니다 (올림 처리)
-            num += 1n;
+    let cnt = 0;
+    while (s.length > 1) {
+        if (s.endsWith('0')) {
+            s = s.slice(0, -1);
         } else {
-            // 현재 비트가 0인 경우, 2로 나눕니다 (오른쪽 시프트)
-            num >>= 1n;
+            let newS = ""
+            let carry = '1'
+            for (let i=s.length-1; i>=0; i--) {
+                if (s[i] === '1' && carry === '1') {
+                    newS = '0' + newS
+                    carry = '1'
+                } else if (s[i] === '1' && carry === '0') {
+                    newS = '1' + newS;
+                    carry = '0'
+                } else if (s[i] === '0' && carry === '1') {
+                    newS = '1' + newS;
+                    carry = '0'
+                } else if (s[i] === '0' && carry === '0') {
+                    newS = '0' + newS;
+                    carry = '0'
+                }
+            }
+            if (carry === '1') {
+                s = carry + newS;
+            } else {
+                s = newS
+            }
         }
-        steps++;
+        cnt++;
     }
 
-    return steps;
+    return cnt;
 };
