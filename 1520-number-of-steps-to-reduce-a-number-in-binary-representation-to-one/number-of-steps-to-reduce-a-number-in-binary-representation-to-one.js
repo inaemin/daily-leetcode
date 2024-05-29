@@ -8,7 +8,6 @@ var numSteps = function(s) {
     while (arr.length > 1) {
         if (arr.at(-1) === 0) {
             arr.pop()
-            cnt++;
         } else {
             arr[arr.length-1] += 1;
             let start = 0;
@@ -25,8 +24,8 @@ var numSteps = function(s) {
             if (start) {
                 arr = [start, ...arr];
             }
-            cnt++;
         }
+        cnt++;
     }
 
     return cnt;
