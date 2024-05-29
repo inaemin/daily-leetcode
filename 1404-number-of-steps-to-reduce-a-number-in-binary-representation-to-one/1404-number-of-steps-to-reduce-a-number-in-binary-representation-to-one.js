@@ -3,30 +3,19 @@
  * @return {number}
  */
 var numSteps = function(s) {
-    let arr = s.split("").map(Number);
-    let cnt = 0;
-    while (arr.length > 1) {
-        if (arr.at(-1) === 0) {
-            arr.pop()
+    let num = BigInt("0b" + s);
+    let steps = 0;
+
+    while (num > 1n) {
+        if (num & 1n) { // 현재 비트가 1인지의 여부
+            // 현재 비트가 1인 경우, 1을 더합니다 (올림 처리)
+            num += 1n;
         } else {
-            arr[arr.length-1] += 1;
-            let start = 0;
-            for (let i=arr.length-1; i>=0; i--) {
-                if (arr[i] > 1) {
-                    arr[i] = 0;
-                    if (i === 0) {
-                        start += 1;
-                    } else {
-                        arr[i-1] += 1;
-                    }
-                }
-            }
-            if (start) {
-                arr = [start, ...arr];
-            }
+            // 현재 비트가 0인 경우, 2로 나눕니다 (오른쪽 시프트)
+            num >>= 1n;
         }
-        cnt++;
+        steps++;
     }
 
-    return cnt;
+    return steps;
 };
