@@ -7,7 +7,7 @@ var numSteps = function(s) {
     let cnt = 0;
     while (arr.length > 1) {
         if (arr.at(-1) === 0) {
-            arr = arr.slice(0, arr.length-1);
+            arr.pop()
             cnt++;
         } else {
             arr[arr.length-1] += 1;
