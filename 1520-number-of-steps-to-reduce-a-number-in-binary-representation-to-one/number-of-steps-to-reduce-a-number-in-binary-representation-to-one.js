@@ -13,19 +13,9 @@ var numSteps = function(s) {
             let newS = "";
             let carry = '1';
             for (let i = s.length - 1; i >= 0; i--) {
-                if (s[i] === '1' && carry === '1') {
-                    newS = '0' + newS;
-                    carry = '1';
-                } else if (s[i] === '1' && carry === '0') {
-                    newS = '1' + newS;
-                    carry = '0';
-                } else if (s[i] === '0' && carry === '1') {
-                    newS = '1' + newS;
-                    carry = '0';
-                } else if (s[i] === '0' && carry === '0') {
-                    newS = '0' + newS;
-                    carry = '0';
-                }
+                let n = s[i] !== carry ? '1' : '0'
+                newS = n + newS;
+                carry = (s[i] === carry && s[i] === '1') ? '1' : '0';
             }
             if (carry === '1') {
                 s = '1' + newS;
