@@ -9,8 +9,8 @@ var countTriplets = function(arr) {
         xor[i+1] = xor[i] ^ arr[i];
     }
     let result = 0;
-    for (let i=0; i<xor.length; i++) {
-        for (let j=i+1; j<xor.length; j++) {
+    for (let i=0; i<n; i++) {
+        for (let j=i+1; j<n; j++) {
             if (xor[i] === xor[j+1]) {
                 result += j-i
             }
