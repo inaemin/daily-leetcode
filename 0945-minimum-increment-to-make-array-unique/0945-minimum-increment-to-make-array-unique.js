@@ -4,17 +4,12 @@
  */
 var minIncrementForUnique = function(nums) {
     let moves = 0;
-    let maxNum = nums[0]
-    const set = new Set();
     nums.sort((a, b) => a - b);
-    for (let i=0; i<nums.length; i++) {
-        if (set.has(nums[i])) {
-            maxNum += 1;
-            set.add(maxNum);
-            moves += maxNum - nums[i]
-        } else {
-            set.add(nums[i])
-            maxNum = nums[i]
+    for (let i=1; i<nums.length; i++) {
+        if (nums[i-1] >= nums[i]) {
+            const inc = nums[i-1] - nums[i] + 1
+            moves += inc;
+            nums[i] += inc;
         }
     }
     return moves;
