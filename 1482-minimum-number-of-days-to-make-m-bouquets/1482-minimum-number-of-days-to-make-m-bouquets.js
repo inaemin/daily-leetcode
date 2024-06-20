@@ -36,7 +36,7 @@ var minDays = function(bloomDay, m, k) {
 
     let min = Math.min(...bloomDay);
     let max = Math.max(...bloomDay);
-    while (min < max) {
+    while (min <= max) {
         let mid = (min+max)/2|0;
         if (canMakeBouquets(mid)) {
             max = mid - 1;   
