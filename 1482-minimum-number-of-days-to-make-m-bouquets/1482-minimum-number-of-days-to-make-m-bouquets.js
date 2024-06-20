@@ -10,7 +10,7 @@ var minDays = function(bloomDay, m, k) {
     bloomDay는 각 위치의 꽃이 피는 날짜가 있음. 한 부케를 만들기 위해선 k개의 꽃이 필요함. 이 꽃들은 반드시 인접해야 함. -> sorting 못함.
     꽃이 피는 최소 날짜와 최대 날짜를 구한다. -> left, right
     이 두 날짜의 평균값 날짜일 때, m 부케를 만들 수 있는지 알아본다. -> canMakeBouquets
-    true라면, 더 최소인 날짜가 있을 수 있으니까 right = mid
+    true라면, 더 최소인 날짜가 있을 수 있으니까 right = mid - 1
     false라면, 날짜를 늘려야 하니까 left = mid + 1
      */
 
