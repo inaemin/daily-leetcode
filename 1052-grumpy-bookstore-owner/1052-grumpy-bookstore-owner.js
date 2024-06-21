@@ -5,20 +5,16 @@
  * @return {number}
  */
 var maxSatisfied = function(customers, grumpy, minutes) {
-    let firstWindow = 0;
-    for (let i=0; i<minutes; i++) {
-        firstWindow += customers[i];
+    let satisfied = 0;
+    for (let i=0; i<customers.length; i++) {
+        if (i < minutes) satisfied += customers[i];
+        else if (!grumpy[i]) satisfied += customers[i];
     }
-    for (let i=minutes; i<customers.length; i++) {
-        firstWindow += grumpy[i] ? 0 : customers[i];
-    }
-
-    let window = firstWindow;
-    let max = window;
+    let max = satisfied;
     for (let i=1; i<=customers.length-minutes; i++) {
-        window -= grumpy[i-1] ? customers[i-1] : 0;
-        window += grumpy[i+minutes-1] ? customers[i+minutes-1] : 0;
-        max = Math.max(max, window);
+        satisfied -= grumpy[i-1] ? customers[i-1] : 0;
+        satisfied += grumpy[i-1+minutes] ? customers[i-1+minutes] : 0;
+        max = Math.max(max, satisfied)
     }
     return max;
 };
