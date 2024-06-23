@@ -16,25 +16,26 @@ var longestSubarray = function(nums, limit) {
     let maxLen = 0;
 
     for (let right=0; right<nums.length; right++) {
+        const curr = nums[right];
         // minQueue 업데이트
-        while (minQueue.length && nums[minQueue[minQueue.length-1]] > nums[right]) {
+        while (minQueue.length && minQueue.at(-1) > curr) {
             minQueue.pop()
         }
-        minQueue.push(right);
+        minQueue.push(curr);
         // maxQueue 업데이트
-        while (maxQueue.length && nums[maxQueue[maxQueue.length-1]] < nums[right]) {
+        while (maxQueue.length && maxQueue.at(-1) < curr) {
             maxQueue.pop()
         }
-        maxQueue.push(right);
+        maxQueue.push(curr);
         // 현재 window가 조건을 만족하지 않는 경우, left를 이동
-        while (nums[maxQueue[0]] - nums[minQueue[0]] > limit) {
-            left++;
-            if (maxQueue[0] < left) {
+        while (maxQueue[0] - minQueue[0] > limit) {
+            if (maxQueue[0] === nums[left]) {
                 maxQueue.shift()
             }
-            if (minQueue[0] < left) {
+            if (minQueue[0] === nums[left]) {
                 minQueue.shift()
             }
+            left++;
         }
         maxLen = Math.max(maxLen, right-left+1)
     }
