@@ -19,11 +19,9 @@ var convertBST = function (root) {
         traverse(node.right)
         sum += node.val;
         node.val = sum;
-        if (node.left) {
-            traverse(node.left)
-        }
+        traverse(node.left)
         return node;
     }
-    
+
     return traverse(root) || root;
 };
