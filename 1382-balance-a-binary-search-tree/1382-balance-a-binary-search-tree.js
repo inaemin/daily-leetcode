@@ -29,10 +29,8 @@ var balanceBST = function(root) {
     
     const replaceTree = (start, end) => {
         if (start > end) return null;
-        let mid = Math.floor((start+end)/2);
-        const root = new TreeNode(arr[mid]);
-        root.left = replaceTree(start, mid-1);
-        root.right = replaceTree(mid+1, end);
+        let mid = (start + end) / 2 | 0;
+        const root = new TreeNode(arr[mid], replaceTree(start, mid-1), replaceTree(mid+1, end));
         return root;
     }
     return replaceTree(0, arr.length-1);
