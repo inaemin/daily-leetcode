@@ -25,7 +25,13 @@ UnionFind.prototype.union = function (n1, n2) { // 노드1과 2의 조상을 비
 }
 
 UnionFind.prototype.isAllConnected = function () {
-    return new Set(this.parent.slice(1)).size === 1;
+    const root = this.find(1);
+    for (let i = 2; i < this.parent.length; i++) {
+        if (this.find(i) !== root) {
+            return false;
+        }
+    }
+    return true;
 }
 
 
