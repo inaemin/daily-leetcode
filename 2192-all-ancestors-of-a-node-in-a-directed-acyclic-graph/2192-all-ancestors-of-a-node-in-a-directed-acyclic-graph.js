@@ -3,37 +3,32 @@
  * @param {number[][]} edges
  * @return {number[][]}
  */
-var getAncestors = function(n, edges) {
+var getAncestors = function (n, edges) {
+    const graph = Array.from({ length: n }, () => []);
     const indegree = Array(n).fill(0);
-    const node = Array.from({ length: n }, () => new Array());
-    edges.forEach((edge) => {
-        const [x, y] = edge;
-        indegree[y] += 1;
-        node[x].push(y);
-    })
+    for (let [from, to] of edges) {
+        indegree[to]++;
+        graph[from].push(to);
+    }
 
+    const result = Array.from({ length: n }, () => new Set());
     const queue = [];
-    const ancestor = Array.from({ length: n }, () => new Set());
-    for (let i=0; i<indegree.length; i++) {
+    for (let i=0; i<n; i++) {
         if (indegree[i] === 0) {
-            queue.push(i);
-            indegree[i] -= 1;
+            queue.push(i)
         }
     }
-    while (queue.length) {
-        let next = queue.shift();
-        node[next].forEach(el => {
-            if (ancestor[next].size > 0) {
-                ancestor[next].forEach(an => ancestor[el].add(an));
+    while (queue.length > 0) {
+        const node = queue.shift();
+        for (let neighbor of graph[node]) {
+            result[neighbor].add(node);
+            result[node].forEach((n) => result[neighbor].add(n));
+            indegree[neighbor]--;
+            if (indegree[neighbor] === 0) {
+                queue.push(neighbor)
             }
-            ancestor[el].add(next);
-            indegree[el] -= 1;
-            if (indegree[el] === 0) {
-                queue.push(el);
-                indegree[el] -= 1;
-            }
-        });
+        }
     }
 
-    return ancestor.map(el => Array.from(el).sort((a, b) => a - b));
+    return result.map(el => Array.from(el).sort((a, b) => a - b));
 };
