@@ -10,18 +10,25 @@
  * @return {ListNode}
  */
 var mergeNodes = function (head) {
-    let p = head.next;
-    const result = new ListNode();
-    let r = result;
-    while (p) {
-        let sum = 0;
-        while (p && p.val !== 0) {
-            sum += p.val;
-            p = p.next;
+    let zero = head;
+    let curr = head.next;
+    let sum = 0;
+    while (curr) {
+        if (curr.val !== 0) {
+            sum += curr.val;
+        } else {
+            zero.val = sum;
+            sum = 0;
+            if (curr.next) {
+                zero.next = curr;
+                zero = zero.next;
+            } else {
+                zero.next = null;
+                break;
+            }
         }
-        r.next = new ListNode(sum)
-        r = r.next;
-        p = p.next;
+        curr = curr.next;
     }
-    return result.next;
+
+    return head;
 };
