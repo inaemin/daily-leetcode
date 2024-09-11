@@ -15,6 +15,7 @@
 ## Greedy
 |  |
 | ------- |
+| [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 ## Sorting
 |  |
@@ -53,6 +54,7 @@
 |  |
 | ------- |
 | [0394-decode-string](https://github.com/inaemin/daily-leetcode/tree/master/0394-decode-string) |
+| [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1298-reverse-substrings-between-each-pair-of-parentheses](https://github.com/inaemin/daily-leetcode/tree/master/1298-reverse-substrings-between-each-pair-of-parentheses) |
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
 | [2727-number-of-senior-citizens](https://github.com/inaemin/daily-leetcode/tree/master/2727-number-of-senior-citizens) |
@@ -63,4 +65,8 @@
 | [0394-decode-string](https://github.com/inaemin/daily-leetcode/tree/master/0394-decode-string) |
 | [1298-reverse-substrings-between-each-pair-of-parentheses](https://github.com/inaemin/daily-leetcode/tree/master/1298-reverse-substrings-between-each-pair-of-parentheses) |
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
+## Two Pointers
+|  |
+| ------- |
+| [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 <!---LeetCode Topics End-->
