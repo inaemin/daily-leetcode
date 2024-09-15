@@ -9,16 +9,24 @@ var findTheLongestSubstring = function(s) {
     let bitmask = 0;
     let maxLength = 0;
     for (let i=0; i<s.length; i++) {
-        if (s[i] === 'a') {
-            bitmask ^= (1 << 0);
-        } else if (s[i] === 'e') {
-            bitmask ^= (1 << 1);
-        } else if (s[i] === 'i') {
-            bitmask ^= (1 << 2);
-        } else if (s[i] === 'o') {
-            bitmask ^= (1 << 3);
-        } else if (s[i] === 'u') {
-            bitmask ^= (1 << 4);
+        switch (s[i]) {
+            case 'a':
+                bitmask ^= (1 << 0);
+                break;
+            case 'e':
+                bitmask ^= (1 << 1);
+                break;
+            case 'i':
+                bitmask ^= (1 << 2);
+                break;
+            case 'o':
+                bitmask ^= (1 << 3);
+                break;
+            case 'u':
+                bitmask ^= (1 << 4);
+                break;
+            default:
+                break;
         }
 
         if (map.has(bitmask)) {
