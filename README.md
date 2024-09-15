@@ -59,6 +59,7 @@
 | [0394-decode-string](https://github.com/inaemin/daily-leetcode/tree/master/0394-decode-string) |
 | [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1298-reverse-substrings-between-each-pair-of-parentheses](https://github.com/inaemin/daily-leetcode/tree/master/1298-reverse-substrings-between-each-pair-of-parentheses) |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/inaemin/daily-leetcode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2727-number-of-senior-citizens](https://github.com/inaemin/daily-leetcode/tree/master/2727-number-of-senior-citizens) |
@@ -76,11 +77,13 @@
 ## Hash Table
 |  |
 | ------- |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/inaemin/daily-leetcode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
 ## Bit Manipulation
 |  |
 | ------- |
 | [1435-xor-queries-of-a-subarray](https://github.com/inaemin/daily-leetcode/tree/master/1435-xor-queries-of-a-subarray) |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/inaemin/daily-leetcode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2503-longest-subarray-with-maximum-bitwise-and](https://github.com/inaemin/daily-leetcode/tree/master/2503-longest-subarray-with-maximum-bitwise-and) |
 ## Counting
@@ -91,6 +94,7 @@
 |  |
 | ------- |
 | [1435-xor-queries-of-a-subarray](https://github.com/inaemin/daily-leetcode/tree/master/1435-xor-queries-of-a-subarray) |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/inaemin/daily-leetcode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 ## Brainteaser
 |  |
 | ------- |
