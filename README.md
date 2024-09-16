@@ -7,6 +7,7 @@
 |  |
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/inaemin/daily-leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1435-xor-queries-of-a-subarray](https://github.com/inaemin/daily-leetcode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
@@ -23,6 +24,7 @@
 ## Sorting
 |  |
 | ------- |
+| [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 ## Linked List
 |  |
@@ -41,6 +43,7 @@
 |  |
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/inaemin/daily-leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1642-water-bottles](https://github.com/inaemin/daily-leetcode/tree/master/1642-water-bottles) |
 | [1951-find-the-winner-of-the-circular-game](https://github.com/inaemin/daily-leetcode/tree/master/1951-find-the-winner-of-the-circular-game) |
 | [2645-pass-the-pillow](https://github.com/inaemin/daily-leetcode/tree/master/2645-pass-the-pillow) |
@@ -57,6 +60,7 @@
 |  |
 | ------- |
 | [0394-decode-string](https://github.com/inaemin/daily-leetcode/tree/master/0394-decode-string) |
+| [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1298-reverse-substrings-between-each-pair-of-parentheses](https://github.com/inaemin/daily-leetcode/tree/master/1298-reverse-substrings-between-each-pair-of-parentheses) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/inaemin/daily-leetcode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
