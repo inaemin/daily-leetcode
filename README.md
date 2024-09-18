@@ -7,6 +7,7 @@
 |  |
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/inaemin/daily-leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1435-xor-queries-of-a-subarray](https://github.com/inaemin/daily-leetcode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
@@ -19,11 +20,13 @@
 ## Greedy
 |  |
 | ------- |
+| [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
 | [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 ## Sorting
 |  |
 | ------- |
+| [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 ## Linked List
@@ -59,6 +62,7 @@
 ## String
 |  |
 | ------- |
+| [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
 | [0394-decode-string](https://github.com/inaemin/daily-leetcode/tree/master/0394-decode-string) |
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
