@@ -129,4 +129,16 @@
 |  |
 | ------- |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/inaemin/daily-leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
+## Depth-First Search
+|  |
+| ------- |
+| [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
+## Graph
+|  |
+| ------- |
+| [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
+## Eulerian Circuit
+|  |
+| ------- |
+| [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
 <!---LeetCode Topics End-->
