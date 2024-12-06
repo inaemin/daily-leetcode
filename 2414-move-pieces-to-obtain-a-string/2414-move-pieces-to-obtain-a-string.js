@@ -1,49 +1,60 @@
+/**
+ * @param {string} start
+ * @param {string} target
+ * @return {boolean}
+ */
 var canChange = function(start, target) {
-    const start_l_idx = [];
-    const start_r_idx = [];
-    const target_l_idx = [];
-    const target_r_idx = [];
+    if (start === target)
+        return true;
+
+    const start_l_index = [];
+    const start_r_index = [];
+    const target_l_index = [];
+    const target_r_index = [];
 
     for (let i=0; i<start.length; i++) {
         if (start[i] === 'L') {
-            start_l_idx.push(i);
+            start_l_index.push(i);
         } else if (start[i] === 'R') {
-            start_r_idx.push(i);
+            start_r_index.push(i);
         }
         if (target[i] === 'L') {
-            target_l_idx.push(i);
+            target_l_index.push(i);
         } else if (target[i] === 'R') {
-            target_r_idx.push(i);
+            target_r_index.push(i);
         }
     }
-    
-    // L과 R의 개수가 다르면 불가능
-    if (start_l_idx.length !== target_l_idx.length || 
-        start_r_idx.length !== target_r_idx.length) {
+
+    if (start_l_index.length !== target_l_index.length
+    || start_r_index.length !== target_r_index.length)
+        return false;
+
+    const hasNumberBetween = (arr, i, j) => {
+        for (let k=0; k<arr.length; k++) {
+            if (arr[k] > j)
+                break;
+            if (arr[k] >= i && arr[k] <= j)
+                return true;
+        }
         return false;
     }
-    
-    // L은 왼쪽으로만 이동 가능
-    for (let i = 0; i < start_l_idx.length; i++) {
-        if (start_l_idx[i] < target_l_idx[i]) {
+
+    // l -> start에서 target으로 갈때 인덱스보다 target이 더 왼쪽인지, 사이에
+    // 다른 알파벳이 있는지 확인
+    // r -> start에서 target으로 갈때 인덱스보다 target이 더 오른쪽인지, 사이에
+    // 다른 알파벳이 있는지 확인
+    for (let i=0; i<start_l_index.length; i++) {
+        if (start_l_index[i] < target_l_index[i])
             return false;
-        }
-    }
-    
-    // R은 오른쪽으로만 이동 가능
-    for (let i = 0; i < start_r_idx.length; i++) {
-        if (start_r_idx[i] > target_r_idx[i]) {
+        if (hasNumberBetween(start_r_index, target_l_index[i], start_l_index[i]))
             return false;
-        }
     }
-    
-    // L과 R의 상대적 순서가 유지되어야 함
-    let startOrder = '';
-    let targetOrder = '';
-    for (let i = 0; i < start.length; i++) {
-        if (start[i] !== '_') startOrder += start[i];
-        if (target[i] !== '_') targetOrder += target[i];
+    for (let i=0; i<start_r_index.length; i++) {
+        if (start_r_index[i] > target_r_index[i])
+            return false;
+        if (hasNumberBetween(target_l_index, start_r_index[i], target_r_index[i]))
+            return false;
     }
-    
-    return startOrder === targetOrder;
+
+    return true;
 };
