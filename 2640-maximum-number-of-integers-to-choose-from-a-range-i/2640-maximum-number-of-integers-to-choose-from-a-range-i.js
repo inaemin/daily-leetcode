@@ -6,19 +6,15 @@
  */
 var maxCount = function(banned, n, maxSum) {
     let count = 0;
-    let pointer = 0;
     let i=1;
     let sum = 0;
-    banned.sort((a, b) => a - b);
+    const set = new Set([...banned.filter(el => el <= n)]);
     while (i <= n) {
-        if (banned[pointer] < i) {
-            pointer++;
-        } else if (banned[pointer] === i) {
-            pointer++;
+        if (set.has(i)) {
             i++;
         } else if (sum + i <= maxSum) {
-            count++;
             sum += i;
+            count++;
             i++;
         } else {
             break;
