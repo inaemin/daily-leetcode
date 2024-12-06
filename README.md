@@ -78,6 +78,7 @@
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2232-adding-spaces-to-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2232-adding-spaces-to-a-string) |
+| [2414-move-pieces-to-obtain-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2414-move-pieces-to-obtain-a-string) |
 | [2727-number-of-senior-citizens](https://github.com/inaemin/daily-leetcode/tree/master/2727-number-of-senior-citizens) |
 | [3018-make-string-a-subsequence-using-cyclic-increments](https://github.com/inaemin/daily-leetcode/tree/master/3018-make-string-a-subsequence-using-cyclic-increments) |
 ## Stack
@@ -94,6 +95,7 @@
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/inaemin/daily-leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [2232-adding-spaces-to-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2232-adding-spaces-to-a-string) |
+| [2414-move-pieces-to-obtain-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2414-move-pieces-to-obtain-a-string) |
 | [3018-make-string-a-subsequence-using-cyclic-increments](https://github.com/inaemin/daily-leetcode/tree/master/3018-make-string-a-subsequence-using-cyclic-increments) |
 ## Hash Table
 |  |
