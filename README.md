@@ -18,6 +18,7 @@
 | [1951-find-the-winner-of-the-circular-game](https://github.com/inaemin/daily-leetcode/tree/master/1951-find-the-winner-of-the-circular-game) |
 | [2232-adding-spaces-to-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2232-adding-spaces-to-a-string) |
 | [2503-longest-subarray-with-maximum-bitwise-and](https://github.com/inaemin/daily-leetcode/tree/master/2503-longest-subarray-with-maximum-bitwise-and) |
+| [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 | [2727-number-of-senior-citizens](https://github.com/inaemin/daily-leetcode/tree/master/2727-number-of-senior-citizens) |
 ## Greedy
 |  |
@@ -25,6 +26,7 @@
 | [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
 | [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
+| [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 ## Sorting
 |  |
 | ------- |
@@ -32,6 +34,7 @@
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
+| [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 ## Linked List
 |  |
 | ------- |
@@ -104,6 +107,7 @@
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/inaemin/daily-leetcode/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
+| [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -129,6 +133,7 @@
 |  |
 | ------- |
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
+| [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 ## String Matching
 |  |
 | ------- |
