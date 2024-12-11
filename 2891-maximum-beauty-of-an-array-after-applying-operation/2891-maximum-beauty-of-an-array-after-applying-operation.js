@@ -14,8 +14,7 @@ var maximumBeauty = function(nums, k) {
             end = i;
             maxLength = Math.max(maxLength, end - start + 1);
         } else {
-            while (nums[i] - nums[start] > 2*k)
-                start++;
+            start++;
             end = i;
         }
     }
