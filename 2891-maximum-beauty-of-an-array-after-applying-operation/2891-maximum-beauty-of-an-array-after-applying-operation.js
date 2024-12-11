@@ -10,9 +10,9 @@ var maximumBeauty = function(nums, k) {
     let end;
     let maxLength = 1;
     for (let i=1; i<nums.length; i++) {
-        if (nums[i] - nums[start] <= 2*k) {
+        if (nums[i] - nums[start] <= 2*k && i - start + 1 > maxLength) {
             end = i;
-            maxLength = Math.max(maxLength, end - start + 1);
+            maxLength = end - start + 1;
         } else {
             start++;
             end = i;
