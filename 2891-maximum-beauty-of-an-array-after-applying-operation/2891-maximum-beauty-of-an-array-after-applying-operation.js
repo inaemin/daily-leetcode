@@ -6,15 +6,17 @@
 var maximumBeauty = function(nums, k) {
     nums.sort((a, b) => a - b);
 
-    const subarray = [nums[0]];
+    let start = 0;
+    let end;
     let maxLength = 1;
     for (let i=1; i<nums.length; i++) {
-        if (nums[i] - subarray[0] <= 2*k) {
-            subarray.push(nums[i]);
-            maxLength = Math.max(maxLength, subarray.length);
+        if (nums[i] - nums[start] <= 2*k) {
+            end = i;
+            maxLength = Math.max(maxLength, end - start + 1);
         } else {
-            subarray.shift();
-            subarray.push(nums[i]);
+            while (nums[i] - nums[start] > 2*k)
+                start++;
+            end = i;
         }
     }
 
