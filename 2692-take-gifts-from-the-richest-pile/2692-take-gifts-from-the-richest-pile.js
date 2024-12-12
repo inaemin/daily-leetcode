@@ -11,7 +11,7 @@ var pickGifts = function (gifts, k) {
 
     for (let i = 0; i < k; i++) {
         const { element: { value } } = mpq.dequeue();
-        const root = Math.floor( Math.sqrt(value) )
+        const root = Math.floor( value ** 0.5 )
         mpq.enqueue({ value: root });
     }
 
