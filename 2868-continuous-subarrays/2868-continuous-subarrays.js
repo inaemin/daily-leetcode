@@ -12,11 +12,11 @@ var continuousSubarrays = function (nums) {
     let count = 0;
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
-        while (ascendingQueue.length && ascendingQueue.at(-1) > num) {
+        while (ascendingQueue.length && ascendingQueue[ascendingQueue.length - 1] > num) {
             ascendingQueue.pop();
         }
         ascendingQueue.push(nums[i]);
-        while (descendingQueue.length && descendingQueue.at(-1) < num) {
+        while (descendingQueue.length && descendingQueue[descendingQueue.length - 1] < num) {
             descendingQueue.pop();
         }
         descendingQueue.push(nums[i]);
