@@ -16,6 +16,7 @@
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1803-average-waiting-time](https://github.com/inaemin/daily-leetcode/tree/master/1803-average-waiting-time) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/inaemin/daily-leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
+| [1917-maximum-average-pass-ratio](https://github.com/inaemin/daily-leetcode/tree/master/1917-maximum-average-pass-ratio) |
 | [1951-find-the-winner-of-the-circular-game](https://github.com/inaemin/daily-leetcode/tree/master/1951-find-the-winner-of-the-circular-game) |
 | [2164-two-best-non-overlapping-events](https://github.com/inaemin/daily-leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2232-adding-spaces-to-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2232-adding-spaces-to-a-string) |
@@ -33,6 +34,7 @@
 | [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
 | [0680-valid-palindrome-ii](https://github.com/inaemin/daily-leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
+| [1917-maximum-average-pass-ratio](https://github.com/inaemin/daily-leetcode/tree/master/1917-maximum-average-pass-ratio) |
 | [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 ## Sorting
 |  |
@@ -180,6 +182,7 @@
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [1917-maximum-average-pass-ratio](https://github.com/inaemin/daily-leetcode/tree/master/1917-maximum-average-pass-ratio) |
 | [2164-two-best-non-overlapping-events](https://github.com/inaemin/daily-leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2692-take-gifts-from-the-richest-pile](https://github.com/inaemin/daily-leetcode/tree/master/2692-take-gifts-from-the-richest-pile) |
 | [2695-find-score-of-an-array-after-marking-all-elements](https://github.com/inaemin/daily-leetcode/tree/master/2695-find-score-of-an-array-after-marking-all-elements) |
