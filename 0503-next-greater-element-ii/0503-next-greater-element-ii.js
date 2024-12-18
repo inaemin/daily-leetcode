@@ -3,19 +3,20 @@
  * @return {number[]}
  */
 var nextGreaterElements = function (nums) {
-    const circular = [...nums, ...nums];
     const stack = [];
-    for (let i = circular.length - 1; i >= 0; i--) {
-        while (circular[i] >= stack.at(-1)) {
+    const result = [];
+    for (let i = nums.length * 2 - 1; i >= 0; i--) {
+        const index = i % nums.length;
+        while (nums[index] >= stack.at(-1)) {
             stack.pop();
         }
         if (stack.length === 0) {
-            nums[i % nums.length] = -1;
-            stack.push(circular[i]);
+            result[index] = -1;
+            stack.push(nums[index]);
         } else {
-            nums[i % nums.length] = stack.at(-1);
-            stack.push(circular[i]);
+            result[index] = stack.at(-1);
+            stack.push(nums[index]);
         }
     }
-    return nums;
+    return result;
 };
