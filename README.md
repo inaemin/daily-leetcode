@@ -11,6 +11,7 @@
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
 | [1435-xor-queries-of-a-subarray](https://github.com/inaemin/daily-leetcode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
+| [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/inaemin/daily-leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 | [1616-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/inaemin/daily-leetcode/tree/master/1616-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
@@ -111,6 +112,7 @@
 | [0150-evaluate-reverse-polish-notation](https://github.com/inaemin/daily-leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0394-decode-string](https://github.com/inaemin/daily-leetcode/tree/master/0394-decode-string) |
 | [1298-reverse-substrings-between-each-pair-of-parentheses](https://github.com/inaemin/daily-leetcode/tree/master/1298-reverse-substrings-between-each-pair-of-parentheses) |
+| [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/inaemin/daily-leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 | [1720-crawler-log-folder](https://github.com/inaemin/daily-leetcode/tree/master/1720-crawler-log-folder) |
 ## Two Pointers
 |  |
@@ -210,4 +212,8 @@
 |  |
 | ------- |
 | [2868-continuous-subarrays](https://github.com/inaemin/daily-leetcode/tree/master/2868-continuous-subarrays) |
+## Monotonic Stack
+|  |
+| ------- |
+| [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/inaemin/daily-leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 <!---LeetCode Topics End-->
