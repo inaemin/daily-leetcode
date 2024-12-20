@@ -185,6 +185,7 @@
 |  |
 | ------- |
 | [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
+| [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 ## Graph
 |  |
 | ------- |
@@ -228,4 +229,16 @@
 | [0503-next-greater-element-ii](https://github.com/inaemin/daily-leetcode/tree/master/0503-next-greater-element-ii) |
 | [0780-max-chunks-to-make-sorted](https://github.com/inaemin/daily-leetcode/tree/master/0780-max-chunks-to-make-sorted) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/inaemin/daily-leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
+## Tree
+|  |
+| ------- |
+| [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
+## Breadth-First Search
+|  |
+| ------- |
+| [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 <!---LeetCode Topics End-->
