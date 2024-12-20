@@ -11,31 +11,27 @@
  * @return {TreeNode}
  */
 var reverseOddLevels = function(root) {
-    const queue = [];
-    queue.push({node: root, depth: 0});
-    const odd = [];
-    while (queue.length) {
-        const head = queue.shift();
-        if (head.depth % 2 === 1) {
-            odd.push(head.node);
-        } else if (head.depth % 2 === 0 && odd.length) {
-            const values = odd.map(el => el.val);
-            values.reverse();
-            odd.forEach((el, idx) => el.val = values[idx]);
-            odd.length = 0;
+    const odd = {};
+    const dfs = (node) => {
+        if (node.depth % 2 === 1) {
+            if (!odd[node.depth]) {
+                odd[node.depth] = [];
+            }
+            odd[node.depth].push(node.node);
         }
-        if (head.node.left) {
-            queue.push({node: head.node.left, depth: head.depth+1});
+        if (node.node.left) {
+            dfs({node: node.node.left, depth: node.depth + 1});
         }
-        if (head.node.right) {
-            queue.push({node: head.node.right, depth: head.depth+1});
+        if (node.node.right) {
+            dfs({node: node.node.right, depth: node.depth + 1});
         }
     }
-    if (odd.length) {
-        const values = odd.map(el => el.val);
+    dfs({node: root, depth: 0});
+
+    for (let nodes of Object.values(odd)) {
+        const values = nodes.map(el => el.val);
         values.reverse();
-        odd.forEach((el, idx) => el.val = values[idx]);
-        odd.length = 0;
+        nodes.forEach((el, idx) => el.val = values[idx]);
     }
 
     return root;
