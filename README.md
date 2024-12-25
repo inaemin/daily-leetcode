@@ -190,10 +190,12 @@
 | [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 | [3058-maximum-number-of-k-divisible-components](https://github.com/inaemin/daily-leetcode/tree/master/3058-maximum-number-of-k-divisible-components) |
+| [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/inaemin/daily-leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
 ## Graph
 |  |
 | ------- |
 | [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
+| [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/inaemin/daily-leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
 ## Eulerian Circuit
 |  |
 | ------- |
@@ -241,11 +243,13 @@
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/inaemin/daily-leetcode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
 | [3058-maximum-number-of-k-divisible-components](https://github.com/inaemin/daily-leetcode/tree/master/3058-maximum-number-of-k-divisible-components) |
+| [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/inaemin/daily-leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/inaemin/daily-leetcode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
+| [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/inaemin/daily-leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
 ## Binary Tree
 |  |
 | ------- |
