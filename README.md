@@ -8,6 +8,7 @@
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/inaemin/daily-leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0179-largest-number](https://github.com/inaemin/daily-leetcode/tree/master/0179-largest-number) |
+| [0494-target-sum](https://github.com/inaemin/daily-leetcode/tree/master/0494-target-sum) |
 | [0496-next-greater-element-i](https://github.com/inaemin/daily-leetcode/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/inaemin/daily-leetcode/tree/master/0503-next-greater-element-ii) |
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
@@ -204,6 +205,7 @@
 ## Dynamic Programming
 |  |
 | ------- |
+| [0494-target-sum](https://github.com/inaemin/daily-leetcode/tree/master/0494-target-sum) |
 | [2164-two-best-non-overlapping-events](https://github.com/inaemin/daily-leetcode/tree/master/2164-two-best-non-overlapping-events) |
 ## Heap (Priority Queue)
 |  |
@@ -267,4 +269,8 @@
 |  |
 | ------- |
 | [3181-find-building-where-alice-and-bob-can-meet](https://github.com/inaemin/daily-leetcode/tree/master/3181-find-building-where-alice-and-bob-can-meet) |
+## Backtracking
+|  |
+| ------- |
+| [0494-target-sum](https://github.com/inaemin/daily-leetcode/tree/master/0494-target-sum) |
 <!---LeetCode Topics End-->
