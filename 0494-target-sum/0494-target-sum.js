@@ -4,23 +4,22 @@
  * @return {number}
  */
 var findTargetSumWays = function(nums, target) {
-    let count = 0;
+    const memo = {};
     const bt = (idx, sum=0) => {
-        if (idx === nums.length - 1) {
-            if (sum + nums[idx] === target) {
-                count++;
-            }
-            if (sum - nums[idx] === target) {
-                count++;
-            }
-            return;
+        const key = `${idx},${sum}`;
+        if (key in memo) {
+            return memo[key];
+        }
+        if (idx === nums.length) {
+            return sum === target ? 1 : 0;
         }
 
-        bt(idx + 1, sum + nums[idx]);
+        const add = bt(idx+1, sum + nums[idx]);
+        const subtract = bt(idx+1, sum - nums[idx]);
 
-        bt(idx + 1, sum - nums[idx])
+        memo[key] = add + subtract;
+        return memo[key];
     }
-    bt(0);
 
-    return count;
+    return bt(0);
 };
