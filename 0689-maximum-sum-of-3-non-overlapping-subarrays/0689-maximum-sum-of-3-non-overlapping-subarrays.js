@@ -15,22 +15,23 @@ var maxSumOfThreeSubarrays = function(nums, k) {
         sum.push(part_sum);
     }
 
-    const prefixSum = [], suffixSum = [];
+    const maxSumFromLeft = []; // 왼쪽부터 시작해서 subarray의 합이 제일 큰 인덱스를 저장.
+    const maxSumFromRight = []; // 오른쪽부터 시작해서 subarray의 합이 제일 크커나 같은 인덱스를 저장.
     let left = 0, right = 0;
     for (let i=0; i<sum.length; i++) {
         if (sum[i] > left) {
-            prefixSum.push(i);
+            maxSumFromLeft.push(i);
             left = sum[i];
         } else {
-            prefixSum.push(prefixSum[i-1]);
+            maxSumFromLeft.push(maxSumFromLeft[i-1]);
         }
     }
     for (let i=sum.length-1; i>=0; i--) {
         if (sum[i] >= right) {
-            suffixSum[i] = i;
+            maxSumFromRight[i] = i;
             right = sum[i];
         } else {
-            suffixSum[i] = suffixSum[i+1];
+            maxSumFromRight[i] = maxSumFromRight[i+1];
         }
     }
 
@@ -38,10 +39,10 @@ var maxSumOfThreeSubarrays = function(nums, k) {
     let max = 0;
     let ans;
     for (let i=k; i<=nums.length-2*k; i++) {
-        const arr_sum = sum[i] + sum[prefixSum[i-k]] + sum[suffixSum[i+k]];
+        const arr_sum = sum[i] + sum[maxSumFromLeft[i-k]] + sum[maxSumFromRight[i+k]];
         if (max < arr_sum) {
             max = arr_sum;
-            ans = [prefixSum[i-k], i, suffixSum[i+k]];
+            ans = [maxSumFromLeft[i-k], i, maxSumFromRight[i+k]];
         }
     }
     return ans;
