@@ -27,7 +27,7 @@ var maxSumOfThreeSubarrays = function(nums, k) {
         }
     }
     for (let i=sum.length-1; i>=0; i--) {
-        if (sum[i] >= right) {
+        if (sum[i] >= right) { // 사전순을 위해서
             maxSumFromRight[i] = i;
             right = sum[i];
         } else {
@@ -35,7 +35,7 @@ var maxSumOfThreeSubarrays = function(nums, k) {
         }
     }
 
-    // 가운데 subarray 찾기
+    // 가운데 subarray의 시작 인덱스 찾기
     let max = 0;
     let ans;
     for (let i=k; i<=nums.length-2*k; i++) {
