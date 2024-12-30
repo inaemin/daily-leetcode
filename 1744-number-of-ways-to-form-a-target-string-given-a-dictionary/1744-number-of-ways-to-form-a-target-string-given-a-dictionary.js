@@ -17,18 +17,14 @@ var numWays = function(words, target) {
     }
 
     const target_len = target.length;
-    const dp = Array.from({length: target_len}, () => new Array(word_len).fill(0));
-
-    for (let i=0; i<target_len; i++) {
-        for (let j=i; j<word_len; j++) {
-            if (i === 0) {
-                dp[i][j] = (dp?.[i]?.[j-1] || 0) + (char_cnt_arr?.[j]?.[target[i]] || 0);
-            } else {
-                dp[i][j] = dp[i][j-1] + dp[i-1][j-1] * (char_cnt_arr?.[j]?.[target[i]] || 0);
-            }
-            dp[i][j] %= mod;
+    const dp = new Array(target_len+1).fill(0);
+    dp[0] = 1;
+    for (let i=0; i<word_len; i++) {
+        for (let j=target_len-1; j>=0; j--) {
+            // words의 i번째 위치하는 target의 j번째 글자의 결과는 j+1에 저장됨.
+            dp[j+1] = (dp[j+1] + dp[j] * (char_cnt_arr[i]?.[target[j]] || 0)) % mod;
         }
     }
 
-    return dp.at(-1).at(-1);
+    return dp.at(-1);
 };
