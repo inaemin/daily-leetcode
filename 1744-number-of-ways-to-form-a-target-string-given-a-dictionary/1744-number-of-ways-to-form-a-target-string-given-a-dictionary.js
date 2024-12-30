@@ -5,35 +5,30 @@
  */
 var numWays = function(words, target) {
     const mod = 10**9 + 7;
-    const map = new Map()
-    words.forEach((word) => {
-        word.split("").forEach((el, idx) => {
-            if (map.has(el) && map.get(el)[idx]) {
-                map.get(el)[idx]++
-            } else if (map.has(el)) {
-                map.get(el)[idx] = 1;
-            } else { map.set(el, {[idx]: 1}); }
-        })
-    })
-    if (target.length === 1) return Object.values(map.get(target)).reduce((r, e) => r+e, 0);
-
-    const m = target.length
-    const n = Number(Object.keys(map.get(target[target.length-1])).at(-1))+1
-    const dp = [...Array(m)].map(el => new Array(n).fill(0));
-    if (map.get(target[0])[0]) dp[0][0] = map.get(target[0])[0]
-    for (let i=1; i<n; i++) {
-        if (map.get(target[0])[i]) dp[0][i] = dp[0][i-1] + map.get(target[0])[i]
-        else dp[0][i] = dp[0][i-1]
+    const word_len = words[0].length;
+    const n = words.length;
+    const char_cnt_arr = []
+    for (let i=0; i<word_len; i++) {
+        const cnt = {}
+        for (let j=0; j<n; j++) {
+            cnt[words[j][i]] = (cnt[words[j][i]] || 0) + 1;
+        }
+        char_cnt_arr.push(cnt);
     }
-    const start = Number(Object.keys(map.get(target[0]))[0]);
-    for (let i=1; i<target.length; i++) {
-        for (let j=start+i; j<n; j++) {
-            if (map.has(target[i]) && map.get(target[i])[j] !== undefined) {
-                dp[i][j] = (dp[i][j-1] + dp[i-1][j-1]*map.get(target[i])[j]) % mod
+
+    const target_len = target.length;
+    const dp = Array.from({length: target_len}, () => new Array(word_len).fill(0));
+
+    for (let i=0; i<target_len; i++) {
+        for (let j=i; j<word_len; j++) {
+            if (i === 0) {
+                dp[i][j] = (dp?.[i]?.[j-1] || 0) + (char_cnt_arr?.[j]?.[target[i]] || 0);
             } else {
-                dp[i][j] = dp[i][j-1];
+                dp[i][j] = dp[i][j-1] + dp[i-1][j-1] * (char_cnt_arr?.[j]?.[target[i]] || 0);
             }
+            dp[i][j] %= mod;
         }
     }
-    return dp[m-1][n-1];
+
+    return dp.at(-1).at(-1);
 };
