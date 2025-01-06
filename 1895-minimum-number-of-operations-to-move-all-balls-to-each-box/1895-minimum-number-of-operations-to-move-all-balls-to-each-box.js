@@ -2,24 +2,27 @@
  * @param {string} boxes
  * @return {number[]}
  */
-var minOperations = function (boxes) {
-    const operation = boxes.split("").map(el => +el);
-    const acc_operation = operation.reduce((res, ele) => {
-        let cnt = res.at(-1) || 0;
-        if (ele === 1) {
-            cnt++;
-        }
-        res.push(cnt);
-        return res;
-    }, [])
+var minOperations = function(boxes) {
+    const n = boxes.length;
+    const operation = boxes.split("").map(Number); // '1', '0'을 숫자로 변환
+    const result = new Array(n).fill(0);
 
-    const result = new Array(boxes.length).fill(0);
-    let left = 0, right = operation.reduce((res, ele, idx) => res + ele * idx, 0);
-    result[0] = left + right - 0 * operation[0];
-    for (let i=1; i<boxes.length; i++) {
-        left += operation[i-1] + (acc_operation[i-2] || 0) // i-2 이전에 있는 1의 개수
-        right -= operation[i] + (acc_operation.at(-1) - acc_operation[i]) // i+1 이후에 있는 1의 개수
-        result[i] = left + right;
+    // 왼쪽에서 오른쪽으로 작업 수 계산
+    let leftCount = 0; // 왼쪽에서 만난 공의 개수
+    let leftOps = 0; // 왼쪽에서의 작업 수
+    for (let i=0; i<n; i++) {
+        result[i] += leftOps; // 왼쪽 작업 수 추가
+        leftCount += operation[i]; // 현재 상자의 공 개수 추가
+        leftOps += leftCount; // 다음 상자로 이동할 때 작업 수 증가
+    }
+
+    // 오른쪽에서 왼쪽으로 작업 수 계산
+    let rightCount = 0; // 오른쪽에서 만난 공의 개수
+    let rightOps = 0; // 오른쪽에서의 작업 수 
+    for (let i=n-1; i>=0; i--) {
+        result[i] += rightOps; // 오른쪽 작업 수 추가
+        rightCount += operation[i]; // 현재 상자의 공 개수 추가
+        rightOps += rightCount; // 다음 상자로 이동할 때 작업 수 증가
     }
 
     return result;
