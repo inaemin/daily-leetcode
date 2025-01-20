@@ -8,7 +8,7 @@ var firstCompleteIndex = function(arr, mat) {
     const n = mat[0].length;
     const row = new Array(m).fill(0);
     const col = new Array(n).fill(0);
-    const table = {}
+    const table = new Array(arr.length+1).fill(0);
     for (let i=0; i<m; i++) {
         for (let j=0; j<n; j++) {
             table[mat[i][j]] = [i, j];
@@ -23,6 +23,4 @@ var firstCompleteIndex = function(arr, mat) {
             return k
         }
     }
-
-
 };
