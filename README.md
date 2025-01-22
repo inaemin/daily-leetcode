@@ -13,6 +13,7 @@
 | [0496-next-greater-element-i](https://github.com/inaemin/daily-leetcode/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/inaemin/daily-leetcode/tree/master/0503-next-greater-element-ii) |
 | [0539-minimum-time-difference](https://github.com/inaemin/daily-leetcode/tree/master/0539-minimum-time-difference) |
+| [0542-01-matrix](https://github.com/inaemin/daily-leetcode/tree/master/0542-01-matrix) |
 | [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/inaemin/daily-leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [0780-max-chunks-to-make-sorted](https://github.com/inaemin/daily-leetcode/tree/master/0780-max-chunks-to-make-sorted) |
 | [0952-word-subsets](https://github.com/inaemin/daily-leetcode/tree/master/0952-word-subsets) |
@@ -268,6 +269,7 @@
 |  |
 | ------- |
 | [0494-target-sum](https://github.com/inaemin/daily-leetcode/tree/master/0494-target-sum) |
+| [0542-01-matrix](https://github.com/inaemin/daily-leetcode/tree/master/0542-01-matrix) |
 | [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/inaemin/daily-leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [1025-minimum-cost-for-tickets](https://github.com/inaemin/daily-leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1063-best-sightseeing-pair](https://github.com/inaemin/daily-leetcode/tree/master/1063-best-sightseeing-pair) |
@@ -322,6 +324,7 @@
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/inaemin/daily-leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/inaemin/daily-leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0542-01-matrix](https://github.com/inaemin/daily-leetcode/tree/master/0542-01-matrix) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/inaemin/daily-leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/inaemin/daily-leetcode/tree/master/1876-map-of-highest-peak) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
@@ -361,6 +364,7 @@
 |  |
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/inaemin/daily-leetcode/tree/master/0407-trapping-rain-water-ii) |
+| [0542-01-matrix](https://github.com/inaemin/daily-leetcode/tree/master/0542-01-matrix) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/inaemin/daily-leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/inaemin/daily-leetcode/tree/master/1876-map-of-highest-peak) |
 | [2145-grid-game](https://github.com/inaemin/daily-leetcode/tree/master/2145-grid-game) |
