@@ -19,6 +19,7 @@
 | [0952-word-subsets](https://github.com/inaemin/daily-leetcode/tree/master/0952-word-subsets) |
 | [1025-minimum-cost-for-tickets](https://github.com/inaemin/daily-leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1063-best-sightseeing-pair](https://github.com/inaemin/daily-leetcode/tree/master/1063-best-sightseeing-pair) |
+| [1396-count-servers-that-communicate](https://github.com/inaemin/daily-leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1435-xor-queries-of-a-subarray](https://github.com/inaemin/daily-leetcode/tree/master/1435-xor-queries-of-a-subarray) |
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/inaemin/daily-leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
@@ -206,6 +207,7 @@
 |  |
 | ------- |
 | [0920-uncommon-words-from-two-sentences](https://github.com/inaemin/daily-leetcode/tree/master/0920-uncommon-words-from-two-sentences) |
+| [1396-count-servers-that-communicate](https://github.com/inaemin/daily-leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1502-construct-k-palindrome-strings](https://github.com/inaemin/daily-leetcode/tree/master/1502-construct-k-palindrome-strings) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/inaemin/daily-leetcode/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2300-construct-string-with-repeat-limit](https://github.com/inaemin/daily-leetcode/tree/master/2300-construct-string-with-repeat-limit) |
@@ -251,6 +253,7 @@
 |  |
 | ------- |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/inaemin/daily-leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [1396-count-servers-that-communicate](https://github.com/inaemin/daily-leetcode/tree/master/1396-count-servers-that-communicate) |
 | [2201-valid-arrangement-of-pairs](https://github.com/inaemin/daily-leetcode/tree/master/2201-valid-arrangement-of-pairs) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 | [3058-maximum-number-of-k-divisible-components](https://github.com/inaemin/daily-leetcode/tree/master/3058-maximum-number-of-k-divisible-components) |
@@ -325,6 +328,7 @@
 | [0407-trapping-rain-water-ii](https://github.com/inaemin/daily-leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/inaemin/daily-leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0542-01-matrix](https://github.com/inaemin/daily-leetcode/tree/master/0542-01-matrix) |
+| [1396-count-servers-that-communicate](https://github.com/inaemin/daily-leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/inaemin/daily-leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/inaemin/daily-leetcode/tree/master/1876-map-of-highest-peak) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/inaemin/daily-leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
@@ -365,6 +369,7 @@
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/inaemin/daily-leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0542-01-matrix](https://github.com/inaemin/daily-leetcode/tree/master/0542-01-matrix) |
+| [1396-count-servers-that-communicate](https://github.com/inaemin/daily-leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/inaemin/daily-leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/inaemin/daily-leetcode/tree/master/1876-map-of-highest-peak) |
 | [2145-grid-game](https://github.com/inaemin/daily-leetcode/tree/master/2145-grid-game) |
@@ -373,4 +378,8 @@
 |  |
 | ------- |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/inaemin/daily-leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+## Union Find
+|  |
+| ------- |
+| [1396-count-servers-that-communicate](https://github.com/inaemin/daily-leetcode/tree/master/1396-count-servers-that-communicate) |
 <!---LeetCode Topics End-->
