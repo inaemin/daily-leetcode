@@ -3,19 +3,13 @@
  * @return {boolean}
  */
 var check = function(nums) {
-    let prev_start_num = nums[0];
-    let prev_num = nums[0];
-    for (let i=1; i<nums.length; i++) {
-        const num = nums[i];
-        if (prev_num > num) {
-            let prev_slice_num = num;
-            for (let j=i; j<nums.length; j++) {
-                if (nums[j] > prev_start_num || nums[j] < prev_slice_num ) return false;
-                prev_slice_num = nums[j];
-            }
-            return true;
+    let drops = 0;
+    const n = nums.length;
+    for (let i=0; i<n; i++) {
+        // 배열은 순환적이므로 마지막 원소와 첫 원소도 비교함
+        if (nums[i] > nums[(i+1) % n]) {
+            drops++;
         }
-        prev_num = num;
     }
-    return true;
+    return drops <= 1;
 };
