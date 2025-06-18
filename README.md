@@ -56,6 +56,7 @@
 | [2868-continuous-subarrays](https://github.com/inaemin/daily-leetcode/tree/master/2868-continuous-subarrays) |
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/inaemin/daily-leetcode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
 | [3181-find-building-where-alice-and-bob-can-meet](https://github.com/inaemin/daily-leetcode/tree/master/3181-find-building-where-alice-and-bob-can-meet) |
+| [3241-divide-array-into-arrays-with-max-difference](https://github.com/inaemin/daily-leetcode/tree/master/3241-divide-array-into-arrays-with-max-difference) |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/inaemin/daily-leetcode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 | [3427-special-array-ii](https://github.com/inaemin/daily-leetcode/tree/master/3427-special-array-ii) |
 | [3429-special-array-i](https://github.com/inaemin/daily-leetcode/tree/master/3429-special-array-i) |
@@ -74,6 +75,7 @@
 | [2509-minimize-xor](https://github.com/inaemin/daily-leetcode/tree/master/2509-minimize-xor) |
 | [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 | [2704-maximum-difference-by-remapping-a-digit](https://github.com/inaemin/daily-leetcode/tree/master/2704-maximum-difference-by-remapping-a-digit) |
+| [3241-divide-array-into-arrays-with-max-difference](https://github.com/inaemin/daily-leetcode/tree/master/3241-divide-array-into-arrays-with-max-difference) |
 ## Sorting
 |  |
 | ------- |
@@ -86,6 +88,7 @@
 | [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 | [2695-find-score-of-an-array-after-marking-all-elements](https://github.com/inaemin/daily-leetcode/tree/master/2695-find-score-of-an-array-after-marking-all-elements) |
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/inaemin/daily-leetcode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
+| [3241-divide-array-into-arrays-with-max-difference](https://github.com/inaemin/daily-leetcode/tree/master/3241-divide-array-into-arrays-with-max-difference) |
 ## Linked List
 |  |
 | ------- |
