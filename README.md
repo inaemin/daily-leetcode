@@ -38,6 +38,7 @@
 | [1951-find-the-winner-of-the-circular-game](https://github.com/inaemin/daily-leetcode/tree/master/1951-find-the-winner-of-the-circular-game) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/inaemin/daily-leetcode/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2145-grid-game](https://github.com/inaemin/daily-leetcode/tree/master/2145-grid-game) |
+| [2150-kth-smallest-product-of-two-sorted-arrays](https://github.com/inaemin/daily-leetcode/tree/master/2150-kth-smallest-product-of-two-sorted-arrays) |
 | [2164-two-best-non-overlapping-events](https://github.com/inaemin/daily-leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2232-adding-spaces-to-a-string](https://github.com/inaemin/daily-leetcode/tree/master/2232-adding-spaces-to-a-string) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/inaemin/daily-leetcode/tree/master/2292-counting-words-with-a-given-prefix) |
@@ -245,6 +246,7 @@
 | ------- |
 | [1468-check-if-n-and-its-double-exist](https://github.com/inaemin/daily-leetcode/tree/master/1468-check-if-n-and-its-double-exist) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/inaemin/daily-leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
+| [2150-kth-smallest-product-of-two-sorted-arrays](https://github.com/inaemin/daily-leetcode/tree/master/2150-kth-smallest-product-of-two-sorted-arrays) |
 | [2164-two-best-non-overlapping-events](https://github.com/inaemin/daily-leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2640-maximum-number-of-integers-to-choose-from-a-range-i](https://github.com/inaemin/daily-leetcode/tree/master/2640-maximum-number-of-integers-to-choose-from-a-range-i) |
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/inaemin/daily-leetcode/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
