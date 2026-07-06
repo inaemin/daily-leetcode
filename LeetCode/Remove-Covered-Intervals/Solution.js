@@ -14,19 +14,17 @@
 14        return b[1] - a[1]
 15    })
 16
-17    let min_l = intervals[0][0];
-18    let max_r = intervals[0][1];
-19    let cnt = 1;
-20    for (let [x, y] of intervals) {
-21        if (min_l <= x && max_r >= y) {
-22            continue;
-23        } else {
-24            // max_r < y
-25            min_l = x;
-26            max_r = y;
-27            cnt++;
-28        }
-29    }
-30
-31    return cnt;
-32};
+17    let max_r = intervals[0][1];
+18    let cnt = 1;
+19    for (let [x, y] of intervals) {
+20        if (max_r >= y) {
+21            continue;
+22        } else {
+23            // max_r < y
+24            max_r = y;
+25            cnt++;
+26        }
+27    }
+28
+29    return cnt;
+30};
