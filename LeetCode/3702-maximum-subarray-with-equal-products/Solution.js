@@ -13,7 +13,7 @@ var maxLength = function(nums) {
     }
 
     let max_length = 1;
-    for (let i=0; i<nums.length; i++) {
+    for (let i=0; i+max_length < nums.length; i++) {
         let g = nums[i];
         let l = nums[i];
         let p = nums[i];
